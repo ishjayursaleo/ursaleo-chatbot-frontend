@@ -79,16 +79,19 @@ const ChatBot = () => {
 
   const handleSendMessage = async () => {
     if (input.trim() !== '') {
-      const newMessages = [...messages, { sender: 'user', text: input }];
+
+      let newInput = input;
+      setInput('');
+
+      const newMessages = [...messages, { sender: 'user', text: newInput }];
       setMessages(newMessages);
       localStorage.setItem(storageKey, JSON.stringify(newMessages));
 
-      const botResponse = await sendMessageToBackend(input);
+      const botResponse = await sendMessageToBackend(newInput);
       const updatedMessages = [...newMessages, { sender: 'bot', text: botResponse }];
       setMessages(updatedMessages);
       localStorage.setItem(storageKey, JSON.stringify(updatedMessages));
 
-      setInput('');
     }
   };
 
@@ -105,7 +108,10 @@ const ChatBot = () => {
   };
 
   useLayoutEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    const messagesContainer = document.querySelector('.chatbot-messages');
+    if (messagesContainer) {
+      messagesContainer.scrollTop = 0;
+    }
   }, [messages]);
 
   return (
