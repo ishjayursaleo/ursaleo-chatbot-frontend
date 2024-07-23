@@ -23,13 +23,19 @@ const ChatBot = () => {
 
   useEffect(() => {
     triggerGoogleAnalyticPageView('/chatbot', 'ChatBot', userData);
+  }, [userData]);
     
+  useEffect(() => {
+    const storageKey = `chat_${chatID}`;  //`chat_${clientId}_${chatID}`
     // Load messages from localStorage
     const savedMessages = localStorage.getItem(storageKey);
     if (savedMessages) {
       setMessages(JSON.parse(savedMessages));
+    } else {
+      // Initialize with an empty message array if no saved messages are found
+      setMessages([]);
     }
-  }, [userData, storageKey]);
+  }, [chatID]);
 
   useEffect(() => {
     const fetchTwinList = async () => {
@@ -56,7 +62,7 @@ const ChatBot = () => {
 
   const sendMessageToBackend = async (message: string) => {
     try {
-      const response = await fetch('http://localhost:8000/core/api/query-response/', {
+      const response = await fetch('http://52.21.129.119:8000/core/api/query-response/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -101,9 +107,6 @@ const ChatBot = () => {
   useLayoutEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
-
-  useEffect(() => {
-  }, [chatID]);
 
   return (
     <div className="chatbot">
