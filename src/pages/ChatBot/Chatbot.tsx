@@ -19,14 +19,14 @@ const ChatBot = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // Key for localStorage
-  const storageKey = `chat_${chatID}`; //`chat_${clientId}_${chatID}`
+  const storageKey = `chat_${clientId}_${chatID}`; //`chat_${clientId}_${chatID}`
 
   useEffect(() => {
     triggerGoogleAnalyticPageView('/chatbot', 'ChatBot', userData);
   }, [userData]);
     
   useEffect(() => {
-    const storageKey = `chat_${chatID}`;  //`chat_${clientId}_${chatID}`
+    const storageKey = `chat_${clientId}_${chatID}`;  //`chat_${clientId}_${chatID}`
     // Load messages from localStorage
     const savedMessages = localStorage.getItem(storageKey);
     if (savedMessages) {
