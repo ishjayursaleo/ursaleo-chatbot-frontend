@@ -1,0 +1,48 @@
+.appHeader{
+    padding: 0.5rem 1.5rem;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.avatarWrapper{
+    display: flex;
+    align-items: center;
+    gap: 75%;
+}
+
+.profilePopup{
+    right: 0 !important;
+    top: 76px !important;
+}
+
+.profileWrapper {
+    height: 60px;
+    background-color: #303030;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.avatarIcon{
+    background-color: #2252D8 !important;
+    border-radius: 0 !important;
+    display: flex;
+    margin-right: 0 !important;
+    height: 100% !important;
+    width: 60px !important;
+}
+
+.avatarText{
+    border: 2px solid white;
+    border-radius: 7px;
+    padding: 5px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px; 
+    height: 27px;
+    font-weight: bold;
+}

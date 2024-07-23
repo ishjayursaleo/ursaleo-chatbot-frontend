@@ -1,0 +1,71 @@
+.buttonCommon{
+    width: 36rem; 
+    height: 3.563rem;
+    text-transform: none !important; 
+    border-radius: 0.875rem;
+    border: 1px solid white;
+}
+
+.adminMenuContainer{
+    display: flex   !important;
+    flex-direction: column  !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0rem 1rem 0rem 1rem    !important;
+    margin-top: 15vh  !important;
+    gap: 21px   !important;
+}
+
+.btnInsideFontSize{
+    font-size: 20px !important;
+    color: #F2F2F2 !important;
+}
+.userLevelButton{
+    width:416px !important;
+    height:56px !important;
+    text-transform: none!important;
+    border-radius:0.875rem!important;
+}
+@media only screen and (max-width: 1280px) {
+    /* Styles for screens up to 1280 pixels wide */
+    .buttonCommon{
+        width: 36rem; 
+        height: 3.563rem;
+        border-radius: 0.875rem;
+        border: 1px solid white;
+    }
+    
+    .adminMenuContainer{
+        padding: 0rem 1rem 0rem 1rem    !important;
+        margin-top: 5rem   !important;
+        gap: 1.875rem   !important;
+    }
+    
+    .userLevelButton{
+        width:20rem!important;
+        height:3rem!important;
+        border-radius:0.875rem!important;
+    }
+}
+@media only screen and (min-width: 1281px) and (max-width: 1366px) {
+    /* Styles for screens between 1281 and 1366 pixels wide */
+}
+
+@media only screen and (min-width: 1367px) and (max-width: 1440px) {
+    /* Styles for screens between 1367 and 1440 pixels wide */
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1536px) {
+    /* Styles for screens between 1441 and 1536 pixels wide */
+}
+
+@media only screen and (min-width: 1537px) and (max-width: 1600px) {
+    /* Styles for screens between 1537 and 1600 pixels wide */
+}
+
+@media only screen and (min-width: 1601px) and (max-width: 1920px) {
+
+}
+
+@media only screen and (min-width: 1921px) {
+}

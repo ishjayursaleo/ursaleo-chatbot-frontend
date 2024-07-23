@@ -1,0 +1,162 @@
+.ulModelButtonWrapper{
+    display: flex;
+    justify-content: space-between !important;
+    padding: 0rem;
+    margin-top: 1rem;
+}
+
+.ulAdminDataCard{
+    width: 100%!important;
+    background-color: #000!important;
+    margin: 0rem 0rem 0.5rem 0rem!important;
+    border-radius: 0 !important;
+}
+.ulAdminInnerDataCard{
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    height: 4rem !important;
+    margin: 0rem 0.5rem !important;
+}
+.paginationContainer{
+    margin: 0.25rem 0rem !important;
+}
+.btnInsideFontSize{
+    font-size: 1.125rem !important;
+    color: #fff !important;
+}
+.btnInsideFontSize{
+    font-size: 1.125rem !important;
+    color: #fff !important;
+}
+.deleteBtnInsideFontSize{
+    font-size: 1.125rem !important;
+}
+.addUserBtn{
+    width:19.563rem!important;
+    height:3rem!important;
+    text-transform: none!important;
+    border-radius:0.875rem!important;
+}
+.deleteBtn{
+    width:19.563rem!important;
+    height:3rem!important;
+    text-transform: none!important;
+    border-radius:0.875rem!important;
+    &:disabled {
+        border-color: gray!important;
+    }
+}
+.ulAdminDataCardTable{
+    height: 39vh;
+    overflow: auto;
+}
+.ulAdminOuterDataCardContainer{
+    min-height: 14.25rem !important;
+}
+.ulAdminSearchBarContainer{
+    margin-bottom: 1rem !important;
+}
+
+.iconWithBorder{
+    border: 2px solid #C0C0C0;
+}
+.checkbox {
+    color: #C0C0C0 !important;
+}
+
+.checkboxChecked{
+    color: #31BBE4 !important;
+}
+
+@media only screen and (max-width: 1280px) {
+    /* Styles for screens up to 1280 pixels wide */
+    .ulModelButtonWrapper{
+        display: flex;
+        justify-content: space-between !important;
+        padding: 0rem;
+        margin-top: 1rem;
+    }
+}
+@media only screen and (min-width: 1281px) and (max-width: 1366px) {
+    /* Styles for screens between 1281 and 1366 pixels wide */
+    .ulModelButtonWrapper{
+        display: flex;
+        justify-content: space-between !important;
+        padding: 0rem;
+        margin-top: 5rem;
+    }
+    .addUserBtn{
+        width:17rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .deleteBtn{
+        width:17rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        &:disabled {
+            border-color: gray!important;
+        }
+    }
+}
+//this is apply for screen size 2560px Macbook Pro - done
+@media only screen and (min-width: 1367px) and (max-width: 1440px) {
+    /* Styles for screens between 1367 and 1440 pixels wide */
+    .ulModelButtonWrapper{
+        display: flex;
+        justify-content: space-between !important;
+        padding: 0rem;
+        margin-top: 6vh !important;
+    }
+}
+//Desktop screen 1536 x 768
+@media only screen and (min-width: 1441px) and (max-width: 1536px) {
+    /* Styles for screens between 1441 and 1536 pixels wide */
+    .ulModelButtonWrapper{
+        display: flex;
+        justify-content: space-between !important;
+        padding: 0rem;
+        margin-top: 5rem;
+    }
+}
+@media only screen and (min-width: 1537px) and (max-width: 1600px) {
+    /* Styles for screens between 1537 and 1600 pixels wide */
+    .ulModelButtonWrapper{
+        display: flex;
+        justify-content: space-between !important;
+        padding: 0rem;
+        margin-top: 5rem;
+    }
+}
+@media only screen and (min-width: 1601px) and (max-width: 1920px) {
+    .ulModelButtonWrapper{
+        display: flex;
+        justify-content: space-between !important;
+        padding: 0rem;
+        margin-top: 5rem;
+    }
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+}
+
+@media only screen and (min-width: 1921px) {
+    .ulModelButtonWrapper{
+        display: flex;
+        justify-content: space-between !important;
+        padding: 0rem;
+        margin-top: 5rem;
+    }
+}

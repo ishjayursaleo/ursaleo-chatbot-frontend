@@ -1,0 +1,569 @@
+
+.clientCards {
+    padding: 2rem 14rem 0rem 14rem;
+}
+
+@media only screen and (max-width: 1280px) {
+    /* Styles for screens up to 1280 pixels wide */
+    .tableHeaderSkelton{
+        width: 47rem !important;
+        height: 78px !important;
+        background-color: #000 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        border-radius: 0rem !important;
+        margin: 0.5rem !important;
+    }
+    .addNewEntitlement{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        margin-top: 1vh !important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .innerRow {
+        max-height: 11rem !important;
+        overflow-y: auto;
+    }
+    
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+    .userSearchTextFelid{
+        color: #fff !important;
+        font-size: 1.125rem!important;
+        width: 44.188rem!important;
+        margin-top: 2rem!important;
+        background-color: #000!important;
+        border: 1px solid #fff!important;
+        border-radius: 0.438rem!important;
+        padding: 0rem 1rem!important;
+        height: 3rem !important;
+    }
+    .clientCards {
+        display: flex!important;
+        justify-content: center!important;
+        align-items: center!important;
+        flex-direction: column !important;
+        min-height: 40vh !important;
+        margin-top: 1.5rem;
+    }   
+    .tablePagination{
+        display: flex !important;
+        justify-content: end !important;
+        width: 52rem !important;
+        height: 6vh !important;
+        margin-top: 1.5rem;
+    }
+
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+}
+@media only screen and (min-width: 1281px) and (max-width: 1366px) {
+    /* Styles for screens between 1281 and 1366 pixels wide */
+    .tableHeaderSkelton{
+        width: 47rem !important;
+        height: 78px !important;
+        background-color: #000 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        border-radius: 0rem !important;
+        margin: 0.5rem !important;
+    }
+    .addNewEntitlement{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        margin-top: 1vh !important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .innerRow {
+        max-height: 14rem !important;
+        overflow-y: auto;
+    }
+    
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+    .userSearchTextFelid{
+        color: #fff !important;
+        font-size: 1.125rem!important;
+        width: 44.188rem!important;
+        margin-top: 2rem!important;
+        background-color: #000!important;
+        border: 1px solid #fff!important;
+        border-radius: 0.438rem!important;
+        padding: 0rem 1rem!important;
+        height: 3rem !important;
+    }
+    .clientCards {
+        display: flex!important;
+        justify-content: center!important;
+        align-items: center!important;
+        flex-direction: column !important;
+        min-height: 40vh !important;
+        margin-top: 1.5rem;
+    }   
+    .tablePagination{
+        display: flex !important;
+        justify-content: end !important;
+        width: 52rem !important;
+        height: 6vh !important;
+        margin-top: 1.5rem;
+    }
+
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .InnerDetailsMinHeight{
+        height: 15rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+    .skeltonOuter{
+        min-height: 24vh !important;
+    }
+}
+//this is apply for screen size 2560px Macbook Pro - done
+@media only screen and (min-width: 1367px) and (max-width: 1440px) {
+    /* Styles for screens between 1367 and 1440 pixels wide */
+    .tableHeaderSkelton{
+        width: 47rem !important;
+        height:10vh !important;
+        background-color: #000 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        border-radius: 0rem !important;
+        margin: 0.5rem !important;
+    }
+    .addNewEntitlement{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        margin-top: 1vh !important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .innerRow {
+        max-height: 14rem !important;
+        overflow-y: auto;
+    }
+    
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+    .userSearchTextFelid{
+        color: #fff !important;
+        font-size: 1.125rem!important;
+        width: 44.188rem!important;
+        margin-top: 2rem!important;
+        background-color: #000!important;
+        border: 1px solid #fff!important;
+        border-radius: 0.438rem!important;
+        padding: 0rem 1rem!important;
+        height: 3rem !important;
+    }
+    .clientCards {
+        display: flex!important;
+        justify-content: center!important;
+        align-items: center!important;
+        flex-direction: column !important;
+        min-height: 40vh !important;
+        margin-top: 1.5rem;
+    }   
+    .tablePagination{
+        display: flex !important;
+        justify-content: end !important;
+        width: 52rem !important;
+        height: 6vh !important;
+        margin-top: 1.5rem;
+    }
+
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .InnerDetailsMinHeight{
+        height: 15rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+    .skeltonOuter{
+        min-height: 24vh !important;
+    }
+}
+//Desktop screen 1536 x 768
+@media only screen and (min-width: 1441px) and (max-width: 1536px) {
+    /* Styles for screens between 1441 and 1536 pixels wide */
+    .tableHeaderSkelton{
+        width: 47rem !important;
+        height:10vh !important;
+        background-color: #000 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        border-radius: 0rem !important;
+        margin: 0.5rem !important;
+    }
+    .addNewEntitlement{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        margin-top: 1vh !important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .innerRow {
+        max-height: 14rem !important;
+        overflow-y: auto;
+    }
+    
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+    .userSearchTextFelid{
+        color: #fff !important;
+        font-size: 1.125rem!important;
+        width: 44.188rem!important;
+        margin-top: 2rem!important;
+        background-color: #000!important;
+        border: 1px solid #fff!important;
+        border-radius: 0.438rem!important;
+        padding: 0rem 1rem!important;
+        height: 3rem !important;
+    }
+    .clientCards {
+        display: flex!important;
+        justify-content: center!important;
+        align-items: center!important;
+        flex-direction: column !important;
+        min-height: 40vh !important;
+        margin-top: 1.5rem;
+    }   
+    .tablePagination{
+        display: flex !important;
+        justify-content: end !important;
+        width: 52rem !important;
+        height: 6vh !important;
+        margin-top: 1.5rem;
+    }
+
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .InnerDetailsMinHeight{
+        height: 15rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+    .skeltonOuter{
+        min-height: 24vh !important;
+    }
+}
+@media only screen and (min-width: 1537px) and (max-width: 1600px) {
+    /* Styles for screens between 1537 and 1600 pixels wide */
+    .tableHeaderSkelton{
+        width: 47rem !important;
+        height:10vh !important;
+        background-color: #000 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        border-radius: 0rem !important;
+        margin: 0.5rem !important;
+    }
+    .addNewEntitlement{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        margin-top: 1vh !important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .innerRow {
+        max-height: 14rem !important;
+        overflow-y: auto;
+    }
+    
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+    .userSearchTextFelid{
+        color: #fff !important;
+        font-size: 1.125rem!important;
+        width: 44.188rem!important;
+        margin-top: 2rem!important;
+        background-color: #000!important;
+        border: 1px solid #fff!important;
+        border-radius: 0.438rem!important;
+        padding: 0rem 1rem!important;
+        height: 3rem !important;
+    }
+    .clientCards {
+        display: flex!important;
+        justify-content: center!important;
+        align-items: center!important;
+        flex-direction: column !important;
+        min-height: 40vh !important;
+        margin-top: 1.5rem;
+    }   
+    .tablePagination{
+        display: flex !important;
+        justify-content: end !important;
+        width: 52rem !important;
+        height: 6vh !important;
+        margin-top: 1.5rem;
+    }
+
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .InnerDetailsMinHeight{
+        height: 15rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+    .skeltonOuter{
+        min-height: 24vh !important;
+    }
+}
+@media only screen and (min-width: 1601px) and (max-width: 1920px) {
+    .tableHeaderSkelton{
+        width: 47rem !important;
+        height:10vh !important;
+        background-color: #000 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        border-radius: 0rem !important;
+        margin: 0.5rem !important;
+    }
+    .addNewEntitlement{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        margin-top: 1vh !important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .innerRow {
+        max-height: 14rem !important;
+        overflow-y: auto;
+    }
+    
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+    .userSearchTextFelid{
+        color: #fff !important;
+        font-size: 1.125rem!important;
+        width: 44.188rem!important;
+        margin-top: 2rem!important;
+        background-color: #000!important;
+        border: 1px solid #fff!important;
+        border-radius: 0.438rem!important;
+        padding: 0rem 1rem!important;
+        height: 3rem !important;
+    }
+    .clientCards {
+        display: flex!important;
+        justify-content: center!important;
+        align-items: center!important;
+        flex-direction: column !important;
+        min-height: 40vh !important;
+        margin-top: 1.5rem;
+    }   
+    .tablePagination{
+        display: flex !important;
+        justify-content: end !important;
+        width: 52rem !important;
+        height: 6vh !important;
+        margin-top: 1.5rem;
+    }
+
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .InnerDetailsMinHeight{
+        height: 15rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+    .skeltonOuter{
+        min-height: 24vh !important;
+    }
+    
+}
+
+
+@media only screen and (min-width: 1921px) {
+
+    .tableHeaderSkelton{
+        width: 47rem !important;
+        height:10vh !important;
+        background-color: #000 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        border-radius: 0rem !important;
+        margin: 0.5rem !important;
+    }
+    .addNewEntitlement{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        margin-top: 1vh !important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .innerRow {
+        max-height: 14rem !important;
+        overflow-y: auto;
+    }
+    
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+    .userSearchTextFelid{
+        color: #fff !important;
+        font-size: 1.125rem!important;
+        width: 44.188rem!important;
+        margin-top: 2rem!important;
+        background-color: #000!important;
+        border: 1px solid #fff!important;
+        border-radius: 0.438rem!important;
+        padding: 0rem 1rem!important;
+        height: 3rem !important;
+    }
+    .clientCards {
+        display: flex!important;
+        justify-content: center!important;
+        align-items: center!important;
+        flex-direction: column !important;
+        min-height: 40vh !important;
+        margin-top: 1.5rem;
+    }   
+    .tablePagination{
+        display: flex !important;
+        justify-content: end !important;
+        width: 52rem !important;
+        height: 6vh !important;
+        margin-top: 1.5rem;
+    }
+
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .InnerDetailsMinHeight{
+        height: 15rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+    .skeltonOuter{
+        min-height: 24vh !important;
+    }
+
+    
+}

@@ -1,0 +1,132 @@
+.modalTitle {
+    color: #F7F7F7 !important;
+    font-weight: 600!important;
+    font-size: 28px !important; 
+    display: flex!important;
+    justify-content: center;
+    margin-bottom:1.5rem !important;
+    line-height: 3.063rem !important;
+}
+
+.closeIcon{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 0 0 0;
+    margin: 0 0 0 1rem;
+}
+
+.modalBox {
+    position: absolute !important;;
+    top: 50% !important;
+    left: 50% !important;;
+    transform: translate(-50%, -50%);
+    width: 1192px!important;
+    height : 901px !important;
+    background-color: rgb(46, 45, 44);
+    border: 2px solid #000;
+    box-shadow: 24;
+    padding: 4;
+    border-radius: 1rem;
+    outline: none;
+    &:focus-visible {
+        outline: none;
+    }
+}
+
+.backIcon{
+    height: 22.5px !important;
+}
+
+@media screen and (max-height: 1000px) {
+
+    .modalBox {
+        position: absolute;
+        top: 55%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        width: 1192px !important;
+        height : 88vh !important;
+        background-color: rgb(46, 45, 44);
+        border: 2px solid #000;
+        box-shadow: 24;
+        padding: 4;
+        border-radius: 1rem;
+        outline: none;
+        &:focus-visible {
+            outline: none;
+        }
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .closeIcon{
+        padding: 1rem 0 0 0;
+        margin: 0 0 0 1rem;
+    }
+    .modalBox {
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 92vw !important;
+        background-color: rgb(46, 45, 44);
+        border: 2px solid #000;
+        box-shadow: 24;
+        padding: 4;
+        border-radius: 1rem;
+        outline: none;
+        &:focus-visible {
+            outline: none;
+        }
+    }
+}
+
+//this is apply for actual 1920x1080
+@media only screen and (min-width: 1001px) and (max-width: 1280px) {
+    /* Styles for screens up to 1280 pixels wide */
+    .closeIcon{
+        padding: 1rem 0 0 0;
+        margin: 0 0 0 1rem;
+    }
+    .modalBox {
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60rem !important;
+        background-color: rgb(46, 45, 44);
+        border: 2px solid #000;
+        box-shadow: 24;
+        padding: 4;
+        border-radius: 1rem;
+        outline: none;
+        &:focus-visible {
+            outline: none;
+        }
+    }
+}
+@media only screen and (min-width: 1281px) and (max-width: 1366px) {
+    .closeIcon{
+        padding: 1rem 0 0 0;
+        margin: 0 0 0 1rem;
+    }
+    .modalBox {
+        position: absolute;
+        top: 55%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        width: 58rem !important;
+        height : 88vh !important;
+        background-color: rgb(46, 45, 44);
+        border: 2px solid #000;
+        box-shadow: 24;
+        padding: 4;
+        border-radius: 1rem;
+        outline: none;
+        &:focus-visible {
+            outline: none;
+        }
+    }
+}
+

@@ -1,0 +1,453 @@
+.clientCards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column ;
+    margin-top: 96px;
+}
+
+.tableHeader {
+    width: 630px !important;
+    height: 70px !important;
+    background-color: #000 !important;
+    display: flex !important;
+    align-items: center !important;
+    border-radius: 0rem !important;
+    margin-bottom: 20px !important;
+}
+
+.tableHeader .overrideMargin {
+    margin-right: 1vw !important; /* Your desired value */
+}
+
+.tablePagination{
+    display: flex !important;
+    justify-content: end !important;
+    width: 634px !important;
+    height: 0px !important;
+}
+
+.tableWrapper {
+    margin-right: '1vw !important'
+}
+
+.ulModelButtonWrapper{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    width: 630px;
+    margin: auto;
+}
+
+.clientNameSize{
+    font-size: 20px !important;
+    color: #F2F2F2 !important; 
+    font-style: 'Noto Sans, Regular';
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.clientAllTwinAndUserSize{
+    font-size: 18px !important;
+    font-weight: 200 !important; 
+    color: #F7F7F7 !important; 
+    letter-spacing: 0px;
+}
+
+.checkbox {
+    color: #C0C0C0 !important;
+}
+.iconWithBorder{
+    border: 2px solid #C0C0C0;
+}
+
+.checkboxChecked{
+    color: #31BBE4 !important;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+    width: 33px !important;
+    height: 33px !important;
+}
+
+.infiniteScrollContainer{
+    height: 480px !important;
+    margin-bottom: 40px !important;
+    overflow-y: scroll !important;
+}
+
+::-webkit-scrollbar-track {
+    background: #2e2d2c !important;
+}
+
+@media screen and (max-height: 800px) {
+    /* Your CSS rules for this screen size */
+    .clientCards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column ;
+        margin-top: 35px;
+        height: 50vh;
+    }
+
+    .infiniteScrollContainer{
+        height: 42vh !important;
+        margin-bottom: 40px !important;
+        overflow-y: scroll !important;
+    }
+}
+
+@media screen and (min-height: 801px) and (max-height: 1000px) {
+    /* Your CSS rules for this screen size */
+    .clientCards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column ;
+        margin-top: 35px;
+    }
+
+    .infiniteScrollContainer{
+        height: 42vh !important;
+        margin-bottom: 40px !important;
+        overflow-y: scroll !important;
+    }
+}
+
+//this is apply for actual 1920x1080
+@media only screen and (max-width: 1280px) {
+    /* Styles for screens up to 1280 pixels wide */
+    .clientCards {
+        display: flex!important;
+        justify-content: center!important;
+        align-items: center!important;
+        flex-direction: column !important;
+    }   
+
+    .infiniteScrollContainer{
+        height: 255px !important;
+        margin-bottom: 40px !important;
+        overflow: auto !important;
+    }
+
+    .clientCards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column ;
+        margin-top: 20px !important;
+        height: 50vh;
+    }
+
+    .tablePagination{
+        display: flex !important;
+        justify-content: end !important;
+        width: 40rem !important;
+        height: 4.8vh !important;
+    }
+
+    .ulModelButtonWrapper{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 2rem;
+        margin-top: 0rem;
+    }
+    .tableHeader {
+        width: 630px !important;
+        height: 8vh !important;
+        background-color: #000 !important;
+        display: flex !important;
+        align-items: center !important;
+        border-radius: 0rem !important;
+        margin-bottom: 1.5vh !important;
+    }
+
+    .deleteBtn{
+        width:19.563rem!important;
+        height:2.5rem!important;
+        text-transform: none!important;
+        border-radius:7px!important;
+        &:disabled {
+            border-color: gray!important;
+        }
+    }
+    .addNewBtn{
+        width:19.563rem!important;
+        height:2.5rem!important;
+        text-transform: none!important;
+        border-radius:7px!important;
+    }
+    .manageULBtn{
+        width:19.563rem!important;
+        height:2.5rem!important;
+        text-transform: none!important;
+        border-radius:7px!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .deleteBtnInsideFontSize{
+        font-size: 1.125rem !important;
+    }
+}
+@media only screen and (min-width: 1281px) and (max-width: 1366px) {
+    /* Styles for screens between 1281 and 1366 pixels wide */
+    .clientCards {
+        display: flex!important;
+        justify-content: center!important;
+        align-items: center!important;
+        flex-direction: column !important;
+        margin-top: 2vw;
+        margin-bottom: -2vw;
+    }   
+    .tablePagination{
+        display: flex !important;
+        justify-content: end !important;
+        width: 45rem !important;
+        height: 1.8vh !important;
+    }
+
+    .ulModelButtonWrapper{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 2rem;
+        margin-top: 2.5rem;
+        padding: 0 2.5rem;
+    }
+    .tableHeader {
+        width: 52rem !important;
+        height: 8vh !important;
+        background-color: #000 !important;
+        display: flex !important;
+        align-items: center !important;
+        border-radius: 0rem !important;
+        margin-bottom: 1.5vh !important;
+    }
+
+    .deleteBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        &:disabled {
+            border-color: gray!important;
+        }
+    }
+    .addNewBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .manageULBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .deleteBtnInsideFontSize{
+        font-size: 1.125rem !important;
+    }
+}
+//this is apply for screen size 2560px Macbook Pro - done
+@media only screen and (min-width: 1367px) and (max-width: 1440px) {
+    /* Styles for screens between 1367 and 1440 pixels wide */ 
+    .tablePagination{
+        display: flex !important;
+        justify-content: end !important;
+        width: 45rem !important;
+        height: 4.8vh !important;
+    }
+
+    .deleteBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        &:disabled {
+            border-color: gray!important;
+        }
+    }
+    .addNewBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .manageULBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .deleteBtnInsideFontSize{
+        font-size: 1.125rem !important;
+    }
+}
+//Desktop screen 1536 x 768
+@media only screen and (min-width: 1441px) and (max-width: 1536px) {
+    /* Styles for screens between 1441 and 1536 pixels wide */ 
+    .tablePagination{
+        display: flex !important;
+        justify-content: end !important;
+        width: 45rem !important;
+        height: 4.8vh !important;
+    }
+
+    .deleteBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        &:disabled {
+            border-color: gray!important;
+        }
+    }
+    .addNewBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .manageULBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .deleteBtnInsideFontSize{
+        font-size: 1.125rem !important;
+    }
+}
+@media only screen and (min-width: 1537px) and (max-width: 1600px) {
+    /* Styles for screens between 1537 and 1600 pixels wide */  
+    .tablePagination{
+        display: flex !important;
+        justify-content: end !important;
+        width: 47rem !important;
+        height: 4.8vh !important;
+    }
+
+    .deleteBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        &:disabled {
+            border-color: gray!important;
+        }
+    }
+    .addNewBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .manageULBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .deleteBtnInsideFontSize{
+        font-size: 1.125rem !important;
+    }
+}
+@media only screen and (min-width: 1601px) and (max-width: 1920px) {
+    .tablePagination{
+        display: flex !important;
+        justify-content: end !important;
+        width: 50rem !important;
+        height: 4.8vh !important;
+    }
+
+    .deleteBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        &:disabled {
+            border-color: gray!important;
+        }
+    }
+    .addNewBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .manageULBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .deleteBtnInsideFontSize{
+        font-size: 1.125rem !important;
+    }
+    
+}
+
+
+@media only screen and (min-width: 1921px) {  
+    .tablePagination{
+        display: flex !important;
+        justify-content: end !important;
+        width: 50rem !important;
+        height: 4.8vh !important;
+    }
+
+    .deleteBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        &:disabled {
+            border-color: gray!important;
+        }
+    }
+    .addNewBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .manageULBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .deleteBtnInsideFontSize{
+        font-size: 1.125rem !important;
+    }
+    
+}

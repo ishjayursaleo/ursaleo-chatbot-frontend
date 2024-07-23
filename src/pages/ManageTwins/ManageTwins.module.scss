@@ -1,0 +1,15 @@
+.manageTwinsContainer{
+display: flex !important;
+flex-direction: column !important;
+justify-content: center !important;
+}
+
+.IframeContainer{
+    margin-top: 5rem;
+}
+
+.btnLaunch{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

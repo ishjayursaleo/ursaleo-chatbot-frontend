@@ -1,0 +1,63 @@
+.modalBox {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 74.5rem;
+    height: 56.313rem;
+    background-color: rgb(46, 45, 44);
+    border: 2px solid #000;
+    box-shadow: 24;
+    padding: 4;
+    border-radius: 1rem;
+}
+
+.cardContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+}
+
+.clientCards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 4rem 0rem 4rem;
+}
+
+.modalTitle {
+    color: #fff;
+    margin-top: 1rem!important;
+    font-weight: 600!important;
+    font-size: 2rem !important;
+    display: flex!important;
+    justify-content: center
+}
+.closeIcon{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 0 0 0;
+    margin: 0 0 0 1rem;
+}
+
+
+.ulModelButtonWrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 1rem 0rem 1rem;
+    margin-top: 5rem;
+}
+
+.tableHeaderSkelton{
+    width: 800px !important;//(39.625rem) -done
+    height: 3.438rem !important;//(5.576rem) 500 Noto Sans color: #F7F7F7 -done
+    background-color: #000 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    border-radius: 0rem !important;
+    margin: 1rem 1rem 0rem 1rem !important;
+    // padding: 1rem;
+}

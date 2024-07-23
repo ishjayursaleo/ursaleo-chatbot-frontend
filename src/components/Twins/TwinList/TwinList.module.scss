@@ -1,0 +1,605 @@
+.ulModelButtonWrapper{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0rem 1rem 0rem 1rem;
+    margin-top: 40px;
+}
+
+.skeltonCard{
+    background-color: #000 !important;
+    display: flex !important;
+    align-items: center !important;
+    border-radius: 0rem !important;
+    margin-bottom: 0.986rem !important;
+    justify-content: center !important;
+}
+
+.iconWithBorder{
+    border: 2px solid #C0C0C0;
+}
+.checkbox {
+    color: #C0C0C0;
+}
+
+.checkboxChecked{
+    color: #31BBE4 !important;
+}
+
+.tableHeader {
+    width: 634px !important;
+    height: 70px !important;
+    background-color: #000 !important;
+    display: flex !important;
+    align-items: center !important;
+    border-radius: 0rem !important;
+    margin-bottom: 20px !important;
+}
+
+.twinCards {
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+    flex-direction: column !important;
+    margin-top: 96px;
+}
+
+.twinCardTable {
+    display: flex;
+    flex-direction: column;
+    max-height: 533px;
+    max-width: 833px; 
+    overflow-x: scroll;
+}
+
+.innerRow {
+    max-height: 40vh;
+    overflow-y: auto;
+}
+
+.innerRow::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.innerRow::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
+}
+
+.innerRow::-webkit-scrollbar-track {
+    background-color: #202020;
+}
+
+@media screen and (max-height: 800px) {
+    .twinCardTable {
+        height: 45vh;
+        min-height: 180px;
+    }
+}
+
+@media screen  and (min-height: 801px) and (max-height: 1000px) {
+    .twinCardTable {
+        height: 45vh;
+    }
+}
+
+@media screen and (max-height: 1000px) {
+    .clientCards {
+        margin-top: 25px;
+    }
+
+    .cardsContainer{
+        height: 56vh !important;
+    }
+}
+
+//this is apply for actual 1920x1080
+@media only screen and (max-width: 1280px) {
+    /* Styles for screens up to 1280 pixels wide */
+    .innerRow {
+        max-height: 37vh;
+        overflow-y: auto;
+    }
+    
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+    .cardsContainer{
+        min-height: 15rem !important; //don't change value due to 150% 1920px will effect
+        margin-top: 1rem !important;
+        overflow: auto;
+        height: 70vh;
+        margin-bottom: 17px;
+    }
+
+    .twinCards {
+        display: flex!important;
+        justify-content: center!important;
+        align-items: center!important;
+        flex-direction: column !important;
+        margin-top: 20px !important;
+    }
+   
+    .tableHeader {
+        width: 630px !important;
+        height: 8vh !important;
+        background-color: #000 !important;
+        display: flex !important;
+        align-items: center !important;
+        border-radius: 0rem !important;
+        margin-bottom: 1.5vh !important;
+    }
+
+    .skeltonCard{
+        width: 35rem !important;
+        height: 10vh !important;
+        border-radius: 0rem !important;
+        margin-bottom: 0.986rem !important;
+    }
+    .ulModelButtonWrapper{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 2rem;
+        margin-top: 0rem;
+    }
+    .tablePagination{
+        display: flex !important;
+        justify-content: end !important;
+        width: 35rem !important;
+        height: 1.8vh !important;
+    }
+
+    .deleteBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        &:disabled {
+            border-color: gray!important;
+        }
+    }
+    .addNewBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .deleteBtnInsideFontSize{
+        font-size: 1.125rem !important;
+    }
+   
+}
+@media only screen and (min-width: 1281px) and (max-width: 1366px) {
+    /* Styles for screens between 1281 and 1366 pixels wide */
+    .innerRow {
+        max-height: 40vh !important;
+        // overflow-y: auto;
+    }
+    
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+    .cardsContainer{
+        min-height: 18rem !important;
+        margin-top: 1rem !important;
+        overflow: auto;
+        height: 58vh;
+    }
+
+    .skeltonCard{
+        width: 35rem !important;
+        height: 10vh !important;
+        background-color: #000 !important;
+        display: flex !important;
+        align-items: center !important;
+        border-radius: 0rem !important;
+        margin-bottom: 0.986rem !important;
+        justify-content: center !important;
+    }
+    .ulModelButtonWrapper{
+        display: flex;
+        justify-content: flex-end;
+        padding: 0rem;
+        gap: 1rem;
+        width: 35rem !important;
+    }
+    .tablePagination{
+        display: flex !important;
+        justify-content: end !important;
+        width: 35rem !important;
+        height: 1.8vh !important;
+    }
+
+    .deleteBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        &:disabled {
+            border-color: gray!important;
+        }
+    }
+    .addNewBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .deleteBtnInsideFontSize{
+        font-size: 1.125rem !important;
+    }
+}
+//this is apply for screen size 2560px Macbook Pro - done
+@media only screen and (min-width: 1367px) and (max-width: 1440px) {
+    /* Styles for screens between 1367 and 1440 pixels wide */
+    .innerRow {
+        max-height: 40vh !important;
+        // overflow-y: auto;
+    }
+    
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+    .cardsContainer{
+        min-height: 20rem !important;
+        margin-top: 0rem !important;
+        overflow: auto;
+        height: 570px;
+    }
+
+    .skeltonCard{
+        width: 40rem !important;
+        height: 10vh !important;
+        border-radius: 0rem !important;
+        margin-bottom: 0.986rem !important;
+    }
+
+    .ulModelButtonWrapper{
+        display: flex;
+        justify-content: space-between;
+        padding: 0rem;
+        gap: 1rem;
+        width: 40rem !important;
+    }
+    .tablePagination{
+        display: flex !important;
+        justify-content: end !important;
+        width: 40rem !important;
+        height: 1.8vh !important;
+    }
+
+    .deleteBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        &:disabled {
+            border-color: gray!important;
+        }
+    }
+    .addNewBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .deleteBtnInsideFontSize{
+        font-size: 1.125rem !important;
+    }
+}
+//Desktop screen 1536 x 768
+@media only screen and (min-width: 1441px) and (max-width: 1536px) {
+    /* Styles for screens between 1441 and 1536 pixels wide */
+    .innerRow {
+        max-height: 50vh !important;
+        // overflow-y: auto;
+    }
+    
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+    .cardsContainer{
+        min-height: 18rem !important;
+        margin-top: 1rem !important;
+        overflow: auto;
+        height: 40vh;
+    }
+    .skeltonCard{
+        width: 40rem !important;
+        height: 10vh !important;
+        border-radius: 0rem !important;
+        margin-bottom: 0.986rem !important;
+    }   
+    .ulModelButtonWrapper{
+        display: flex;
+        justify-content: space-between;
+        padding: 0rem;
+        gap: 1rem;
+        margin-top: 2rem;
+        width: 40rem !important;
+    }
+    .tablePagination{
+        display: flex !important;
+        justify-content: end !important;
+        width: 40rem !important;
+        height: 1.8vh !important;
+    }
+
+    .deleteBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        &:disabled {
+            border-color: gray!important;
+        }
+    }
+    .addNewBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .deleteBtnInsideFontSize{
+        font-size: 1.125rem !important;
+    }
+}
+@media only screen and (min-width: 1537px) and (max-width: 1600px) {
+    /* Styles for screens between 1537 and 1600 pixels wide */
+    .innerRow {
+        max-height: 50vh !important;
+        // overflow-y: auto;
+    }
+    
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+    .cardsContainer{
+        min-height: 18rem !important;
+        margin-top: 1rem !important;
+        overflow: auto;
+        height: 54vh;
+    }
+    .skeltonCard{
+        width: 40rem !important;
+        height: 8vh !important;
+        border-radius: 0rem !important;
+        margin-bottom: 0.986rem !important;
+    }
+    .ulModelButtonWrapper{
+        display: flex;
+        justify-content: space-between;
+        padding: 0rem;
+        gap: 1rem;
+        width: 40rem !important;
+    }
+    .tablePagination{
+        display: flex !important;
+        justify-content: end !important;
+        width: 40rem !important;
+        height: 1.8vh !important;
+    }
+
+    .deleteBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        &:disabled {
+            border-color: gray!important;
+        }
+    }
+    .addNewBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .deleteBtnInsideFontSize{
+        font-size: 1.125rem !important;
+    }
+}
+@media only screen and (min-width: 1601px) and (max-width: 1920px) {
+    .innerRow {
+        max-height: 40vh !important;
+        // overflow-y: auto;
+    }
+    
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+    .cardsContainer{
+        min-height: 24rem !important;
+        margin-top: 1rem !important;
+        overflow: auto;
+        height: 65vh;
+    }
+    .skeltonCard{
+        width: 40rem !important;
+        height: 10vh !important;
+        border-radius: 0rem !important;
+        margin-bottom: 0.986rem !important;
+    }  
+    .ulModelButtonWrapper{
+        display: flex;
+        justify-content: space-between;
+        padding: 0rem;
+        gap: 1rem;
+        width: 40rem !important;
+    }
+    .tablePagination{
+        display: flex !important;
+        justify-content: end !important;
+        width: 40rem !important;
+        height: 1.8vh !important;
+    }
+
+    .deleteBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        &:disabled {
+            border-color: gray!important;
+        }
+    }
+    .addNewBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .deleteBtnInsideFontSize{
+        font-size: 1.125rem !important;
+    }
+    .skeltonContainer{
+        margin-top: 3rem !important;
+        margin-bottom: 1rem !important;
+    }
+}
+
+@media only screen and (min-width: 1921px) {
+    .innerRow {
+        max-height: 50vh !important;
+        overflow-y: auto;
+    }
+    
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+    .cardsContainer{
+        min-height: 20rem !important;
+        margin-top: 2rem !important;
+        overflow: auto;
+        height: 60vh;
+    }
+    .skeltonCard{
+        width: 40rem !important;
+        height: 10vh !important;
+        border-radius: 0rem !important;
+        margin-bottom: 0.986rem !important;
+    }
+    .ulModelButtonWrapper{
+        display: flex;
+        justify-content: space-between;
+        padding: 0rem;
+        gap: 1rem;
+        width: 45rem !important;
+    }
+
+    .tablePagination{
+        display: flex !important;
+        justify-content: end !important;
+        width: 45rem !important;
+        height: 1.8vh !important;
+    }
+
+    .deleteBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        &:disabled {
+            border-color: gray!important;
+        }
+    }
+    .addNewBtn{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .deleteBtnInsideFontSize{
+        font-size: 1.125rem !important;
+    }
+}

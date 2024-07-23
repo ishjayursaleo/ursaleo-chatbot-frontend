@@ -1,0 +1,32 @@
+.addNewBtn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.tableCell{
+    background-color: #12213d;
+}
+
+.tableCellText{
+    font-weight: 500;
+    color: white;
+}
+.tableCellColumn{
+    display: flex;
+}
+.tableCellColumnIcon{
+    display: flex;
+    justify-content: center;
+}
+.tableHeaderCellAction{
+    display: flex !important;
+    justify-content: center !important;
+    font-weight: bolder !important;
+    color: white !important;
+}
+.tableHeaderCell{
+    font-weight: bolder;
+    color: white !important;
+}

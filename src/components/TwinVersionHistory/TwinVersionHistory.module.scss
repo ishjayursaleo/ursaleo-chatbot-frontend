@@ -1,0 +1,192 @@
+
+.twinListContainer {
+    max-height: 400px;
+    overflow-y: auto;
+  
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: white; // Set your desired thumb color
+      border-radius: 10px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background-color: #202020; // Set your desired track color
+    }
+}
+
+.twinListCardContent{
+  height: 30vh;
+  overflow: auto;
+}
+
+.twinColumnAlignment{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.radioInputButton {
+  &, &.Mui-checked {
+   border-color: #ffffff !important;
+  }
+  color: #31BBE4 !important;
+}
+
+.paginationContainer{
+  margin-top: 1rem;
+  display: flex !important;
+  justify-content: end !important;
+  width: 100%;
+}
+#twinVersionHeaderColumnsText{
+  font-size: 1.25rem ;
+  font-weight: 200 ;
+  color: #ffffff ;
+}
+.manageULBtn{
+  text-transform: none!important;
+  border-radius:0.875rem!important;
+}
+.btnInsideFontSize{
+  color: #fff !important;
+}
+.uploadBtnContainer{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.twinVersionOuterContainer{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column !important;
+}
+
+/* Keep only media queries without styles */
+
+@media only screen and (max-width: 1280px) {
+  /* Empty media query */
+  .twinVersionOuterContainer{
+    margin-top: 2rem !important;
+  }
+  .manageULBtn{
+    width:20rem!important;
+    height:3rem!important;
+    border-radius:0.875rem!important;
+  }
+  .btnInsideFontSize{
+    font-size: 1.125rem !important;
+  }
+  .uploadBtnContainer{
+    margin-top: 2vh !important;
+  }
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1366px) {
+  /* Empty media query */
+  .twinVersionOuterContainer{
+    margin-top: 2rem !important;
+  }
+  .manageULBtn{
+    width:20rem!important;
+    height:3rem!important;
+    border-radius:0.875rem!important;
+  }
+  .btnInsideFontSize{
+    font-size: 1.125rem !important;
+  }
+  .uploadBtnContainer{
+    margin-top: 2vh !important;
+  }
+}
+
+@media only screen and (min-width: 1367px) and (max-width: 1440px) {
+  /* Empty media query */
+  .twinVersionOuterContainer{
+    margin-top: 3rem !important;
+  }
+  .manageULBtn{
+    width:20rem!important;
+    height:3rem!important;
+    border-radius:0.875rem!important;
+  }
+  .btnInsideFontSize{
+    font-size: 1.125rem !important;
+  }
+  .uploadBtnContainer{
+    margin-top: 2vh !important;
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1536px) {
+  /* Empty media query */
+  .twinVersionOuterContainer{
+    margin-top: 3rem !important;
+  }
+  .manageULBtn{
+    width:20rem!important;
+    height:3rem!important;
+    border-radius:0.875rem!important;
+  }
+  .btnInsideFontSize{
+    font-size: 1.125rem !important;
+  }
+  .uploadBtnContainer{
+    margin-top: 2vh !important;
+  }
+}
+
+@media only screen and (min-width: 1537px) and (max-width: 1600px) {
+  /* Empty media query */
+  .twinVersionOuterContainer{
+    margin-top: 4rem !important;
+  }
+  .manageULBtn{
+    width:20rem!important;
+    height:3rem!important;
+    border-radius:0.875rem!important;
+  }
+  .btnInsideFontSize{
+    font-size: 1.125rem !important;
+  }
+  .uploadBtnContainer{
+    margin-top: 2vh !important;
+  }
+}
+
+@media only screen and (min-width: 1601px) and (max-width: 1920px) {
+  .twinVersionOuterContainer{
+    margin-top: 4rem !important;
+  }
+  .manageULBtn{
+    width:20rem!important;
+    height:3rem!important;
+    border-radius:0.875rem!important;
+  }
+  .btnInsideFontSize{
+    font-size: 1.125rem !important;
+  }
+  .uploadBtnContainer{
+    margin-top: 2vh !important;
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  .twinVersionOuterContainer{
+    margin-top: 4rem !important;
+  }
+  .manageULBtn{
+    width:20rem!important;
+    height:3rem!important;
+    border-radius:0.875rem!important;
+  }
+  .btnInsideFontSize{
+    font-size: 1.125rem !important;
+  }
+  .uploadBtnContainer{
+    margin-top: 2vh !important;
+  }
+}

@@ -1,0 +1,72 @@
+.modalBox {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 90rem;
+    height: 50rem;
+    background-color: rgb(46, 45, 44);
+    border: 2px solid #000;
+    box-shadow: 24;
+    padding: 4;
+    border-radius: 1rem;
+}
+
+.clientCards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 4rem 0rem 4rem;
+}
+.closeIcon{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 0 0 0;
+    margin: 0 0 0 1rem;
+}
+
+// Your external styles.scss file
+
+.twinListContainer {
+    max-height: 400px;
+    overflow-y: auto;
+  
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: white; // Set your desired thumb color
+      border-radius: 10px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background-color: #202020; // Set your desired track color
+    }
+  }
+
+  .twinColumnAlignment{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+  }
+
+  .radioInputButton {
+    &, &.Mui-checked {
+      color: white !important;
+    }
+  }
+
+  .paginationContainer{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1rem;
+  }
+
+
+  #twinVersionHeaderColumnsText{
+    font-size: 1.25rem ;
+    font-weight: 200 ;
+    color: #ffffff ;
+  }

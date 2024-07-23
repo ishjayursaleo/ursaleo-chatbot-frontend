@@ -1,0 +1,73 @@
+@import "../../styles/styles.scss";
+@import "../../styles//base/settings";
+
+#sidebarWrapper {
+  display: flex;
+  flex-direction: column;
+}
+#bottomItems {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding-bottom: 1.5rem;
+}
+#topLeftLogo {
+  min-height: 48;
+  padding-right: 2.5;
+  padding-left: 1.5;
+}
+#topLeftLogoButton:hover{
+    background-color: #fff !important;
+}
+#btnCommon{
+  text-transform: none;
+}
+
+.logoText{
+  font-size: large;
+  font-weight: bolder;
+  margin: 0 0 0 1rem;
+  padding: 0;
+
+}
+
+.contentGroup{
+  display: flex;
+  align-items: center;
+}
+
+.searchDropdown{
+  width: 100%;
+  padding: 0.5rem 0 0.5rem 0;
+  
+}
+
+.dropdownOption{
+  background-color: #303030;
+  padding: 0;
+  list-style: none;
+  color : #989898;
+  border : 1px solid #F7F7F7;
+  border-radius : 7px;
+}
+
+.content3 {
+  display: flex;
+  justify-content: center;
+}
+
+.dropOptionWrapper{
+  padding-top: 0.5em;
+  height: 2.5em;
+  font-size: 18px;
+  color: #C0C0C0;
+  background-color: #303030;
+  font-family: "Noto Sans, Light";
+  font-weight: 300;
+  line-height: 24px;
+  padding-left: 1rem;
+  cursor: pointer;
+  &:hover{
+    background-color: #000000;
+  }
+}

@@ -1,0 +1,38 @@
+//Color
+$white: #fff;
+$black: #000;
+$blue: #437EF7;
+$text-header-black: #272D37;
+$text-header-gray: #5F6D7E;
+
+$chip-text-green: #2D8A39;
+$chip-bg-green: #F0FAF0;
+$chip-text-red: #E2341D;
+$chip-bg-red: #FFF2F0;
+$chip-text-orange: #EEA23E;
+$chip-bg-orange: #FFF8EB;
+$chip-text-blue: #437EF7;
+$chip-bg-blue: rgba(0, 0, 0, 0.03);
+
+$tabpane-btn-left: #DAE0E6;
+
+// Font sizes
+$font-size-xxl: 2rem;
+$font-size-xl: 1.75rem;
+$font-size-large: 1.5rem;
+$font-size-medium: 1.25rem;
+$font-size-default: 1rem;
+$font-size-small: 0.8rem;
+
+:export {
+    primary: $blue;
+    secondary: $text-header-gray;
+}
+
+@mixin transition($val) {
+    transition: $val;
+    -moz-transition: $val;
+    -o-transition: $val;
+    -webkit-transition: $val;
+  }
+  

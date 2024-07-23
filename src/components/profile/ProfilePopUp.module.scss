@@ -1,0 +1,71 @@
+.profilePopUp{
+    margin-top: 2.5rem;
+    margin-left: 1rem;
+}
+
+.menuListProps{
+    background-color: #303030;
+}
+
+.usrDetails{
+    margin-top: 26px;
+    margin-bottom: 19px;
+}
+
+.usrName{
+    font-size: 20px !important;
+    line-height: 27px !important;
+    justify-content: center;
+    display: flex;
+    color: #F7F7F7;
+    letter-spacing: 0;
+    font-weight: unset !important;
+}
+
+.usrRole {
+    font-size: 16px !important;
+    line-height: 22px !important;
+    justify-content: center;
+    display: flex;
+    color: #F7F7F7;
+    letter-spacing: 0;
+    font-weight: unset !important;
+    font-family: 'Noto Sans', Light !important;
+}
+  
+.editProfile:hover {
+    background-color: #fff !important;
+    color: black !important;
+    border: 1px solid black !important;
+}
+
+.adminButton, .editProfile, .signoutButton {
+    text-transform: none !important;
+    justify-content: center !important;
+    margin: auto !important;
+    background-color: #303030 !important;
+    width: 274px !important;
+    height: 56px !important;
+    border: 1px solid #F7F7F7 !important;
+    border-radius: 10px !important;
+    font-size: 20px !important;
+    line-height: 27px !important;
+    color: #F7F7F7 !important;
+    font-family: "Noto Sans, Regular !important;";
+    margin-bottom: 10px !important;
+}
+
+.adminButton:hover {
+    background-color: #fff !important;
+    color: black !important;
+    border: 1px solid black !important;
+}
+
+.signoutButton:hover {
+    background-color: #fff !important;
+    color: black !important;
+    border: 1px solid black !important;
+}
+
+
+

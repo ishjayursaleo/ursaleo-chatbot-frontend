@@ -1,0 +1,543 @@
+.searchExistingTextFelid{
+    color: #fff !important;
+    font-size: 1.125rem !important;
+    margin: 2rem 0 2rem 0 !important;
+    background-color: #000 !important;
+    border: 1px solid #fff !important;
+    border-radius: 0.438rem !important;
+    padding: 0rem 1rem !important;
+    height: 3.5rem !important;
+}
+.existingUserAreaContainer{
+    padding: 0.5rem !important;
+    background-color: transparent !important;
+    border: 1px solid #fff !important;
+    width: 100% !important;
+    height: 5rem !important;
+    flex-wrap: wrap !important;
+    max-height: 15rem !important;
+    overflow-y: auto !important;
+    border-radius: 0.5rem !important;
+}
+
+.addNewBtn{
+    width:20rem!important;
+    height:3rem!important;
+    text-transform: none!important;
+    border-radius:0.875rem!important;
+    margin: 1.5rem 0 1.5rem 0 !important;
+}
+.btnInsideFontSize{
+    font-size: 1.125rem !important;
+    color: #fff !important;
+}
+
+.newUserTextField{
+    color: #fff  !important;
+    font-size: 1.125rem  !important;
+    margin-top: 2rem  !important;
+    background-color: #000  !important;
+    border: 1px solid #fff  !important;
+    border-radius: 0.438rem  !important;
+    padding: 0rem 1rem  !important;
+    height: 3.5rem  !important;
+}
+.sendInviteBtn{
+    width:20rem!important;
+    height:3rem!important;
+    text-transform: none!important;
+    border-radius:0.875rem!important;
+    margin: 0.25rem 0 1.5rem 0 !important;
+}
+
+.inviteUserChipArea{
+    padding: 0.5rem !important;
+    background-color: transparent!important; 
+    border: 1px solid #fff !important;
+    width: 100% !important;
+    height: 5rem !important;
+    flex-wrap: wrap !important;
+    max-height: 15rem !important;
+    overflow-y: auto !important;
+    border-radius: 0.25rem !important;
+}
+
+@media only screen and (max-width: 1280px) {
+    /* Styles for screens up to 1280 pixels wide */
+    .addNewTwinContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem !important;
+    }
+    
+    .textFieldStyle {
+        color: #fff !important;
+        align-items: center !important;
+        font-size: 1.25rem !important;
+        background-color: #000 !important;
+        padding: 0 3rem 0 1rem !important;
+        justify-content: center !important;
+        border-radius: 0.438rem !important;
+        height: 2.4375rem !important;
+    }
+    
+    .addNewBtn{
+        width:20rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .searchExistingTextFelid{
+        color: #fff !important;
+        font-size: 1.125rem !important;
+        margin: 1rem 0 1rem 0 !important;
+        background-color: #000 !important;
+        border: 1px solid #fff !important;
+        border-radius: 0.438rem !important;
+        padding: 0rem 1rem !important;
+        height: 3rem !important;
+    }
+
+    .newUserTextField{
+        color: #fff  !important;
+        font-size: 1.125rem  !important;
+        margin-top: 0.5rem  !important;
+        background-color: #000  !important;
+        border: 1px solid #fff  !important;
+        border-radius: 0.438rem  !important;
+        padding: 0rem 1rem  !important;
+        height: 3rem !important;
+    }
+    .inviteUserChipArea{
+        padding: 0.5rem !important;
+        background-color: transparent!important; 
+        border: 1px solid #fff !important;
+        width: 100% !important;
+        height: 4.5rem !important;
+        flex-wrap: wrap !important;
+        max-height: 15rem !important;
+        overflow-y: auto !important;
+        border-radius: 0.25rem !important;
+        margin: 1rem 0 1rem 0 !important;
+    }
+    .sendInviteBtn{
+        width:20rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        margin: 0.25rem 0 1.5rem 0 !important;
+    }
+}
+@media only screen and (min-width: 1281px) and (max-width: 1366px) {
+    /* Styles for screens between 1281 and 1366 pixels wide */
+    .addNewTwinContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 7rem;
+    }
+    
+    .textFieldStyle {
+        color: #fff !important;
+        align-items: center !important;
+        font-size: 1.25rem !important;
+        background-color: #000 !important;
+        padding: 0 3rem 0 1rem !important;
+        justify-content: center !important;
+        border-radius: 0.438rem !important;
+        height: 3.4375rem !important;
+    }
+    
+    .addNewBtn{
+        width:20rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .searchExistingTextFelid{
+        color: #fff !important;
+        font-size: 1.125rem !important;
+        margin: 1rem 0 1rem 0 !important;
+        background-color: #000 !important;
+        border: 1px solid #fff !important;
+        border-radius: 0.438rem !important;
+        padding: 0rem 1rem !important;
+        height: 3.5rem !important;
+    }
+
+    .newUserTextField{
+        color: #fff  !important;
+        font-size: 1.125rem  !important;
+        margin-top: 0.5rem  !important;
+        background-color: #000  !important;
+        border: 1px solid #fff  !important;
+        border-radius: 0.438rem  !important;
+        padding: 0rem 1rem  !important;
+        height: 3.5rem  !important;
+    }
+    .inviteUserChipArea{
+        padding: 0.5rem !important;
+        background-color: transparent!important; 
+        border: 1px solid #fff !important;
+        width: 100% !important;
+        height: 4.5rem !important;
+        flex-wrap: wrap !important;
+        max-height: 15rem !important;
+        overflow-y: auto !important;
+        border-radius: 0.25rem !important;
+        margin: 1rem 0 1rem 0 !important;
+    }
+    .sendInviteBtn{
+        width:20rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        margin: 0.25rem 0 1.5rem 0 !important;
+    }
+}
+//this is apply for screen size 2560px Macbook Pro - done
+@media only screen and (min-width: 1367px) and (max-width: 1440px) {
+    /* Styles for screens between 1367 and 1440 pixels wide */
+    .mainOuterContainer{
+        margin-top: 4rem !important;
+    }
+    .addNewTwinContainer {
+        display: flex !important;
+        justify-content: center !important;
+        margin-top: 8rem !important;
+    }
+    
+    .textFieldStyle {
+        color: #fff !important;
+        align-items: center !important;
+        font-size: 1.25rem !important;
+        background-color: #000 !important;
+        padding: 0 3rem 0 1rem !important;
+        justify-content: center !important;
+        border-radius: 0.438rem !important;
+        height: 3.4375rem !important;
+    }
+    
+    .addNewBtn{
+        width:20rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .searchExistingTextFelid{
+        color: #fff !important;
+        font-size: 1.125rem !important;
+        margin: 1.5rem 0 1.5rem 0 !important;
+        background-color: #000 !important;
+        border: 1px solid #fff !important;
+        border-radius: 0.438rem !important;
+        padding: 0rem 1rem !important;
+        height: 3.5rem !important;
+    }
+
+    .newUserTextField{
+        color: #fff  !important;
+        font-size: 1.125rem  !important;
+        margin-top: 0.5rem  !important;
+        background-color: #000  !important;
+        border: 1px solid #fff  !important;
+        border-radius: 0.438rem  !important;
+        padding: 0rem 1rem  !important;
+        height: 3.5rem  !important;
+    }
+    .inviteUserChipArea{
+        padding: 0.5rem !important;
+        background-color: transparent!important; 
+        border: 1px solid #fff !important;
+        width: 100% !important;
+        height: 4.5rem !important;
+        flex-wrap: wrap !important;
+        max-height: 15rem !important;
+        overflow-y: auto !important;
+        border-radius: 0.25rem !important;
+        margin: 1rem 0 1rem 0 !important;
+    }
+}
+//Desktop screen 1536 x 768
+@media only screen and (min-width: 1441px) and (max-width: 1536px) {
+    /* Styles for screens between 1441 and 1536 pixels wide */
+    .addNewTwinContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem !important;
+    }
+    
+    .textFieldStyle {
+        color: #fff !important;
+        align-items: center !important;
+        font-size: 1.25rem !important;
+        background-color: #000 !important;
+        padding: 0 3rem 0 1rem !important;
+        justify-content: center !important;
+        border-radius: 0.438rem !important;
+        height: 3.4375rem !important;
+    }
+    
+    .addNewBtn{
+        width:20rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .searchExistingTextFelid{
+        color: #fff !important;
+        font-size: 1.125rem !important;
+        margin: 1.5rem 0 1.5rem 0 !important;
+        background-color: #000 !important;
+        border: 1px solid #fff !important;
+        border-radius: 0.438rem !important;
+        padding: 0rem 1rem !important;
+        height: 3.5rem !important;
+    }
+
+    .newUserTextField{
+        color: #fff  !important;
+        font-size: 1.125rem  !important;
+        margin-top: 0.5rem  !important;
+        background-color: #000  !important;
+        border: 1px solid #fff  !important;
+        border-radius: 0.438rem  !important;
+        padding: 0rem 1rem  !important;
+        height: 3.5rem  !important;
+    }
+    .inviteUserChipArea{
+        padding: 0.5rem !important;
+        background-color: transparent!important; 
+        border: 1px solid #fff !important;
+        width: 100% !important;
+        height: 4.5rem !important;
+        flex-wrap: wrap !important;
+        max-height: 15rem !important;
+        overflow-y: auto !important;
+        border-radius: 0.25rem !important;
+        margin: 1rem 0 1rem 0 !important;
+    }
+    .sendInviteBtn{
+        width:20rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        margin: 0rem 0 0rem 0 !important;
+    }
+}
+@media only screen and (min-width: 1537px) and (max-width: 1600px) {
+    /* Styles for screens between 1537 and 1600 pixels wide */
+    .mainOuterContainer{
+        margin-top: 4rem !important;
+    }
+    .addNewTwinContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 7rem;
+    }
+    
+    .textFieldStyle {
+        color: #fff !important;
+        align-items: center !important;
+        font-size: 1.25rem !important;
+        background-color: #000 !important;
+        padding: 0 3rem 0 1rem !important;
+        justify-content: center !important;
+        border-radius: 0.438rem !important;
+        height: 3.4375rem !important;
+    }
+    
+    .addNewBtn{
+        width:20rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .searchExistingTextFelid{
+        color: #fff !important;
+        font-size: 1.125rem !important;
+        margin: 1.5rem 0 1.5rem 0 !important;
+        background-color: #000 !important;
+        border: 1px solid #fff !important;
+        border-radius: 0.438rem !important;
+        padding: 0rem 1rem !important;
+        height: 3.5rem !important;
+    }
+
+    .newUserTextField{
+        color: #fff  !important;
+        font-size: 1.125rem  !important;
+        margin-top: 0.5rem  !important;
+        background-color: #000  !important;
+        border: 1px solid #fff  !important;
+        border-radius: 0.438rem  !important;
+        padding: 0rem 1rem  !important;
+        height: 3.5rem  !important;
+    }
+    .inviteUserChipArea{
+        padding: 0.5rem !important;
+        background-color: transparent!important; 
+        border: 1px solid #fff !important;
+        width: 100% !important;
+        height: 4.5rem !important;
+        flex-wrap: wrap !important;
+        max-height: 15rem !important;
+        overflow-y: auto !important;
+        border-radius: 0.25rem !important;
+        margin: 1rem 0 1rem 0 !important;
+    }
+}
+@media only screen and (min-width: 1601px) and (max-width: 1920px) {
+    .mainOuterContainer{
+        margin-top: 4rem !important;
+    }
+    .addNewTwinContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 7rem;
+    }
+    
+    .textFieldStyle {
+        color: #fff !important;
+        align-items: center !important;
+        font-size: 1.25rem !important;
+        background-color: #000 !important;
+        padding: 0 3rem 0 1rem !important;
+        justify-content: center !important;
+        border-radius: 0.438rem !important;
+        height: 3.4375rem !important;
+    }
+    
+    .addNewBtn{
+        width:20rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .searchExistingTextFelid{
+        color: #fff !important;
+        font-size: 1.125rem !important;
+        margin: 1.5rem 0 1.5rem 0 !important;
+        background-color: #000 !important;
+        border: 1px solid #fff !important;
+        border-radius: 0.438rem !important;
+        padding: 0rem 1rem !important;
+        height: 3.5rem !important;
+    }
+
+    .newUserTextField{
+        color: #fff  !important;
+        font-size: 1.125rem  !important;
+        margin-top: 2rem  !important;
+        background-color: #000  !important;
+        border: 1px solid #fff  !important;
+        border-radius: 0.438rem  !important;
+        padding: 0rem 1rem  !important;
+        height: 3.5rem  !important;
+    }
+    .inviteUserChipArea{
+        padding: 0.5rem !important;
+        background-color: transparent!important; 
+        border: 1px solid #fff !important;
+        width: 100% !important;
+        height: 4.5rem !important;
+        flex-wrap: wrap !important;
+        max-height: 15rem !important;
+        overflow-y: auto !important;
+        border-radius: 0.25rem !important;
+        margin: 2rem 0 2rem 0 !important;
+    }
+    .sendInviteBtn{
+        width:20rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        margin: 0rem 0 0rem 0 !important;
+    }
+}
+
+@media only screen and (min-width: 1921px) {
+    .addNewTwinContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 7rem;
+    }
+    
+    .textFieldStyle {
+        color: #fff !important;
+        align-items: center !important;
+        font-size: 1.25rem !important;
+        background-color: #000 !important;
+        padding: 0 3rem 0 1rem !important;
+        justify-content: center !important;
+        border-radius: 0.438rem !important;
+        height: 3.4375rem !important;
+    }
+    
+    .addNewBtn{
+        width:20rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .searchExistingTextFelid{
+        color: #fff !important;
+        font-size: 1.125rem !important;
+        margin: 1.5rem 0 1.5rem 0 !important;
+        background-color: #000 !important;
+        border: 1px solid #fff !important;
+        border-radius: 0.438rem !important;
+        padding: 0rem 1rem !important;
+        height: 3.5rem !important;
+    }
+
+    .newUserTextField{
+        color: #fff  !important;
+        font-size: 1.125rem  !important;
+        margin-top: 2rem  !important;
+        background-color: #000  !important;
+        border: 1px solid #fff  !important;
+        border-radius: 0.438rem  !important;
+        padding: 0rem 1rem  !important;
+        height: 3.5rem  !important;
+    }
+    .inviteUserChipArea{
+        padding: 0.5rem !important;
+        background-color: transparent!important; 
+        border: 1px solid #fff !important;
+        width: 100% !important;
+        height: 4.5rem !important;
+        flex-wrap: wrap !important;
+        max-height: 15rem !important;
+        overflow-y: auto !important;
+        border-radius: 0.25rem !important;
+        margin: 2rem 0 2rem 0 !important;
+    }
+}

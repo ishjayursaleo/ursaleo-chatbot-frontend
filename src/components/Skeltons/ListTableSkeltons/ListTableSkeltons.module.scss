@@ -1,0 +1,44 @@
+// .tableHeaderSkelton{
+//     width: 634px !important;
+//     // height: 89.22px !important;
+//     margin: 0.986rem !important;
+// }
+
+.tableHeaderSkelton{
+    width: 630px !important;
+    height: 70px !important;
+    background-color: #000 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    border-radius: 0rem !important;
+    margin-bottom: 30px !important;
+}
+
+//this is apply for actual 1920x1080
+@media only screen and (max-width: 1280px) {
+    /* Styles for screens up to 1280 pixels wide */
+    .tableHeaderSkelton{
+        width: 630px !important;
+        height: 3rem !important;
+        background-color: #000 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        border-radius: 0rem !important;
+        margin: 0.5rem !important;
+    }
+}
+@media only screen and (min-width: 1281px) and (max-width: 1366px) {
+    /* Styles for screens between 1281 and 1366 pixels wide */
+    .tableHeaderSkelton{
+        width: 52rem !important;
+        height: 78px !important;
+        background-color: #000 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        border-radius: 0rem !important;
+        margin: 0.5rem !important;
+    }
+}

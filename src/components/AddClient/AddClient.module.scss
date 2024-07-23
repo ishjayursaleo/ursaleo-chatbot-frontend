@@ -1,0 +1,211 @@
+@media only screen and (max-width: 1280px) {
+    /* Styles for screens up to 1280 pixels wide */
+    .addNewTwinContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 7rem;
+    }
+    
+    .textFieldStyle {
+        color: #fff !important;
+        align-items: center !important;
+        font-size: 1.25rem !important;
+        background-color: #000 !important;
+        padding: 0 3rem 0 1rem !important;
+        justify-content: center !important;
+        border-radius: 0.438rem !important;
+        height: 3.4375rem !important;
+    }
+    
+    .addNewBtn{
+        width:20rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+}
+@media only screen and (min-width: 1281px) and (max-width: 1366px) {
+    /* Styles for screens between 1281 and 1366 pixels wide */
+    .addNewTwinContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 7rem;
+    }
+    
+    .textFieldStyle {
+        color: #fff !important;
+        align-items: center !important;
+        font-size: 1.25rem !important;
+        background-color: #000 !important;
+        padding: 0 3rem 0 1rem !important;
+        justify-content: center !important;
+        border-radius: 0.438rem !important;
+        height: 3.4375rem !important;
+    }
+    
+    .addNewBtn{
+        width:20rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+}
+//this is apply for screen size 2560px Macbook Pro - done
+@media only screen and (min-width: 1367px) and (max-width: 1440px) {
+    /* Styles for screens between 1367 and 1440 pixels wide */
+    .addNewTwinContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 7rem;
+    }
+    
+    .textFieldStyle {
+        color: #fff !important;
+        align-items: center !important;
+        font-size: 1.25rem !important;
+        background-color: #000 !important;
+        padding: 0 3rem 0 1rem !important;
+        justify-content: center !important;
+        border-radius: 0.438rem !important;
+        height: 3.4375rem !important;
+    }
+    
+    .addNewBtn{
+        width:20rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+}
+//Desktop screen 1536 x 768
+@media only screen and (min-width: 1441px) and (max-width: 1536px) {
+    /* Styles for screens between 1441 and 1536 pixels wide */
+    .addNewTwinContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 7rem;
+    }
+    
+    .textFieldStyle {
+        color: #fff !important;
+        align-items: center !important;
+        font-size: 1.25rem !important;
+        background-color: #000 !important;
+        padding: 0 3rem 0 1rem !important;
+        justify-content: center !important;
+        border-radius: 0.438rem !important;
+        height: 3.4375rem !important;
+    }
+    
+    .addNewBtn{
+        width:20rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+}
+@media only screen and (min-width: 1537px) and (max-width: 1600px) {
+    /* Styles for screens between 1537 and 1600 pixels wide */
+    .addNewTwinContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 7rem;
+    }
+    
+    .textFieldStyle {
+        color: #fff !important;
+        align-items: center !important;
+        font-size: 1.25rem !important;
+        background-color: #000 !important;
+        padding: 0 3rem 0 1rem !important;
+        justify-content: center !important;
+        border-radius: 0.438rem !important;
+        height: 3.4375rem !important;
+    }
+    
+    .addNewBtn{
+        width:20rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+}
+@media only screen and (min-width: 1601px) and (max-width: 1920px) {
+    .addNewTwinContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 7rem;
+    }
+    
+    .textFieldStyle {
+        color: #fff !important;
+        align-items: center !important;
+        font-size: 1.25rem !important;
+        background-color: #000 !important;
+        padding: 0 3rem 0 1rem !important;
+        justify-content: center !important;
+        border-radius: 0.438rem !important;
+        height: 3.4375rem !important;
+    }
+    
+    .addNewBtn{
+        width:20rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+}
+
+@media only screen and (min-width: 1921px) {
+    .addNewTwinContainer {
+        display: flex;
+        justify-content: center;
+        margin-top: 7rem;
+    }
+    
+    .textFieldStyle {
+        color: #fff !important;
+        align-items: center !important;
+        font-size: 1.25rem !important;
+        background-color: #000 !important;
+        padding: 0 3rem 0 1rem !important;
+        justify-content: center !important;
+        border-radius: 0.438rem !important;
+        height: 3.4375rem !important;
+    }
+    
+    .addNewBtn{
+        width:20rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+}

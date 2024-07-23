@@ -1,0 +1,559 @@
+.userSearchTextFelid{
+    color: #fff;
+    font-size: 1.125rem;
+    width: 44.188rem;
+    margin-top: 40px !important;
+    background-color: #000;
+    border: 1px solid #fff;
+    border-radius: 0.438rem;
+    padding: 0rem 1rem;
+    height: 3rem
+}
+.emailToolTip {
+    font-size: 1.125rem;
+    font-family: Noto Sans, Light !important;
+    cursor: pointer;
+    color: #f2f2f2;
+    font-weight: 200;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &:hover {
+        white-space: unset;
+        max-width: unset;
+    }
+}
+
+.innerRow {
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.innerRow::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+.innerRow::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
+}
+
+.innerRow::-webkit-scrollbar-track {
+    background-color: #202020;
+}
+
+.tableHeaderSkelton{
+    background-color: #000 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    border-radius: 0rem !important;
+}
+.clientCards {
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+    flex-direction: column !important;
+    margin-top: 40px !important;
+} 
+
+.clientCardTable {
+    display: flex;
+    flex-direction: column;
+    max-height: 533px;
+    max-width: 833px; 
+}
+
+.tablePagination{
+    display: flex !important;
+    justify-content: end !important;
+}
+
+.deleteImg {
+    width: '42px';
+    height: '31px';
+    opacity: 0.8;
+}
+
+.deleteDialog{
+    color: #F7F7F7;
+    background-color: #303030 !important;
+    border: 1px solid #C0C0C0 !important;
+    height: 219px !important;
+    width: 560px !important;
+    border-radius: 12px !important;
+}
+.deleteDialogContent{
+    color: #F7F7F7 !important;
+    background-color: #303030 !important;
+    display: flex;
+    justify-content: center !important; 
+    font-size: 18px !important;
+    margin-top: 15px !important;
+    gap: 2em; 
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.deleteDialogBtn{
+    background-color: #303030 !important;
+    color: #F7F7F7 !important;
+    border: 1px solid #FFFFFF !important;
+    border-radius: 12px !important;
+    font-size: 20px !important;
+    text-transform: none !important;
+    margin-bottom: 21px !important;
+    width: 150px;
+    height: 44px;
+    &:hover{
+        background-color: #F7F7F7 !important;
+        color: #303030 !important;
+    }
+
+}
+
+.addNewEntitlement{
+    width:407px !important;
+    height:56px !important;
+    text-transform: none!important;
+    border-radius:0.875rem!important;
+    margin-top: 41px !important;
+}
+
+.btnInsideFontSize{
+    font-size: 20px !important;
+    color: #fff !important;
+}
+
+@media screen and (max-height: 800px) {
+    .clientCardTable {
+        height: 35vh;
+        min-height: 180px;
+    }
+  }
+
+@media screen  and (min-height: 801px) and (max-height: 1000px) {
+    .clientCardTable {
+        height: 45vh;
+    }
+  }
+
+@media only screen and (max-width: 1280px) {
+    /* Styles for screens up to 1280 pixels wide */
+    .tableHeaderSkelton{
+        width: 49rem !important;
+        height:7vh !important;
+        margin: 0.5rem !important;
+        min-height: 8vh !important;
+    }
+    .addNewEntitlement{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        margin-top: 1vh !important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .innerRow {
+        max-height: 50vh !important;
+    }
+    
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+    .userSearchTextFelid{
+        color: #fff !important;
+        font-size: 1.125rem!important;
+        width: 44.188rem!important;
+        background-color: #000!important;
+        border: 1px solid #fff!important;
+        border-radius: 0.438rem!important;
+        padding: 0rem 1rem!important;
+        height: 3rem !important;
+    }
+ 
+    .tablePagination{
+        width: 52rem !important;
+        height: 3vh !important;
+        margin-top: 1.5rem;
+    }
+
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .InnerDetailsMinHeight{
+        display: flex !important;
+        flex-direction: column !important;
+        // justify-content: center !important;
+    }
+    .skeltonOuter{
+        min-height: 14rem !important;
+    }
+    .InnerDetailsMinHeightSkelton{
+        height: 15rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+}
+@media only screen and (min-width: 1281px) and (max-width: 1366px) {
+    /* Styles for screens between 1281 and 1366 pixels wide */
+    .tableHeaderSkelton{
+        width: 49rem !important;
+        height:7vh !important;
+        margin: 0.5rem !important;
+        min-height: 8vh !important;
+    }
+    .addNewEntitlement{
+        width:19.563rem!important;
+        height:3rem!important;
+        text-transform: none!important;
+        border-radius:0.875rem!important;
+        margin-top: 1vh !important;
+    }
+    .btnInsideFontSize{
+        font-size: 1.125rem !important;
+        color: #fff !important;
+    }
+    .innerRow {
+        max-height: 50vh !important;
+        // overflow-y: auto;
+    }
+    
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+    .userSearchTextFelid{
+        color: #fff !important;
+        font-size: 1.125rem!important;
+        width: 44.188rem!important;
+        background-color: #000!important;
+        border: 1px solid #fff!important;
+        border-radius: 0.438rem!important;
+        padding: 0rem 1rem!important;
+        height: 3rem !important;
+    }
+ 
+    .tablePagination{
+        width: 52rem !important;
+        height: 6vh !important;
+        margin-top: 1.5rem;
+    }
+    .InnerDetailsMinHeight{
+        display: flex !important;
+        flex-direction: column !important;
+        // justify-content: center !important;
+    }
+    .skeltonOuter{
+        min-height: 15rem !important;
+    }
+    .InnerDetailsMinHeightSkelton{
+        height: 15rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+}
+//this is apply for screen size 2560px Macbook Pro - done
+@media only screen and (min-width: 1367px) and (max-width: 1440px) {
+    /* Styles for screens between 1367 and 1440 pixels wide */
+    .tableHeaderSkelton{
+        width: 49rem !important;
+        height:7vh !important;
+        margin: 0.5rem !important;
+        min-height: 8vh !important;
+    }
+    .innerRow {
+        max-height: 50vh !important;
+        // overflow-y: auto;
+    }
+    
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+    .userSearchTextFelid{
+        color: #fff !important;
+        font-size: 1.125rem!important;
+        width: 44.188rem!important;
+        background-color: #000!important;
+        border: 1px solid #fff!important;
+        border-radius: 0.438rem!important;
+        padding: 0rem 1rem!important;
+        height: 3rem !important;
+    }
+
+    .tablePagination{
+        width: 52rem !important;
+        height: 6vh !important;
+        margin-top: 1.5rem;
+    }
+    .InnerDetailsMinHeight{
+        display: flex !important;
+        flex-direction: column !important;
+        // justify-content: center !important;
+    }
+    .skeltonOuter{
+        min-height: 15rem !important;
+    }
+    .InnerDetailsMinHeightSkelton{
+        height: 15rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+}
+//Desktop screen 1536 x 768
+@media only screen and (min-width: 1441px) and (max-width: 1536px) {
+    /* Styles for screens between 1441 and 1536 pixels wide */
+    .tableHeaderSkelton{
+        width: 49rem !important;
+        height:7vh !important;
+        margin: 0.5rem !important;
+        min-height: 8vh !important;
+    }
+    .innerRow {
+        max-height: 50vh !important;
+        // overflow-y: auto;
+    }
+    
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+    .userSearchTextFelid{
+        color: #fff !important;
+        font-size: 1.125rem!important;
+        width: 44.188rem!important;
+        background-color: #000!important;
+        border: 1px solid #fff!important;
+        border-radius: 0.438rem!important;
+        padding: 0rem 1rem!important;
+        height: 3rem !important;
+    }
+ 
+    .tablePagination{
+        width: 52rem !important;
+        height: 6vh !important;
+        margin-top: 1.5rem;
+    }
+    .InnerDetailsMinHeight{
+        display: flex !important;
+        flex-direction: column !important;
+        // justify-content: center !important;
+    }
+    .skeltonOuter{
+        min-height: 15rem !important;
+    }
+    .InnerDetailsMinHeightSkelton{
+        height: 15rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+}
+@media only screen and (min-width: 1537px) and (max-width: 1600px) {
+    /* Styles for screens between 1537 and 1600 pixels wide */
+    .tableHeaderSkelton{
+        width: 49rem !important;
+        height:7vh !important;
+        margin: 0.5rem !important;
+        min-height: 8vh !important;
+    }
+    .innerRow {
+        max-height: 50vh !important;
+        // overflow-y: auto;
+    }
+    
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+    .userSearchTextFelid{
+        color: #fff !important;
+        font-size: 1.125rem!important;
+        width: 44.188rem!important;
+        background-color: #000!important;
+        border: 1px solid #fff!important;
+        border-radius: 0.438rem!important;
+        padding: 0rem 1rem!important;
+        height: 3rem !important;
+    }
+ 
+    .tablePagination{
+        width: 52rem !important;
+        height: 6vh !important;
+        margin-top: 1.5rem;
+    }
+    .InnerDetailsMinHeight{
+        display: flex !important;
+        flex-direction: column !important;
+        // justify-content: center !important;
+    }
+    .skeltonOuter{
+        min-height: 15rem !important;
+    }
+    .InnerDetailsMinHeightSkelton{
+        height: 15rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+}
+@media only screen and (min-width: 1601px) and (max-width: 1920px) {
+    .tableHeaderSkelton{
+        width: 49rem !important;
+        height:6.5vh !important;
+        margin: 0.5rem !important;
+        min-height: 8vh !important;
+    }
+    .innerRow {
+        max-height: 50vh !important;
+        // overflow-y: auto;
+    }
+    
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+    .userSearchTextFelid{
+        color: #fff !important;
+        font-size: 1.125rem!important;
+        width: 44.188rem!important;
+        background-color: #000!important;
+        border: 1px solid #fff!important;
+        border-radius: 0.438rem!important;
+        padding: 0rem 1rem!important;
+        height: 3rem !important;
+    }
+   
+    .tablePagination{
+        width: 52rem !important;
+        height: 6vh !important;
+        margin-top: 1.5rem;
+    }
+    .InnerDetailsMinHeight{
+        display: flex !important;
+        flex-direction: column !important;
+        // justify-content: center !important;
+    }
+    .skeltonOuter{
+        min-height: 15rem !important;
+    }
+    .InnerDetailsMinHeightSkelton{
+        height: 15rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+    
+}
+@media only screen and (min-width: 1921px) {
+    .tableHeaderSkelton{
+        width: 49rem !important;
+        height:7vh !important;
+        margin: 0.5rem !important;
+        min-height: 8vh !important;
+    }
+    .innerRow {
+        max-height: 50vh !important;
+        overflow-y: auto;
+    }
+    
+    .innerRow::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    
+    .innerRow::-webkit-scrollbar-thumb {
+        background-color: gray;
+        border-radius: 10px;
+    }
+    
+    .innerRow::-webkit-scrollbar-track {
+        background-color: #202020;
+    }
+    .userSearchTextFelid{
+        color: #fff !important;
+        font-size: 1.125rem!important;
+        width: 44.188rem!important;
+        background-color: #000!important;
+        border: 1px solid #fff!important;
+        border-radius: 0.438rem!important;
+        padding: 0rem 1rem!important;
+        height: 3rem !important;
+    } 
+    .tablePagination{
+        width: 52rem !important;
+        height: 6vh !important;
+        margin-top: 1.5rem;
+    }
+    .InnerDetailsMinHeight{
+        display: flex !important;
+        flex-direction: column !important;
+        // justify-content: center !important;
+    }
+    .skeltonOuter{
+        min-height: 15rem !important;
+    }
+    .InnerDetailsMinHeightSkelton{
+        height: 15rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }    
+}

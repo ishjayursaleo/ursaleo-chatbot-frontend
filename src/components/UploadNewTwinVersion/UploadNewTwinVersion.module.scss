@@ -1,0 +1,64 @@
+.uploadNewVersionContainer{
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: column !important;
+}
+.btnInsideFontSize{
+    font-size: 1.125rem !important;
+    color: #fff !important;
+}
+.addUserBtn{
+    width:20rem!important;
+    height:3rem!important;
+    text-transform: none!important;
+    border-radius:0.875rem!important;
+}
+.uploadNewBtnContainer{
+    margin-top: 40px;
+}
+
+@media only screen and (max-width: 1280px) {
+    /* Styles for screens up to 1280 pixels wide */
+    .uploadNewVersionContainer{
+        margin-top: 3rem;
+    }
+}
+@media only screen and (min-width: 1281px) and (max-width: 1366px) {
+    /* Styles for screens between 1281 and 1366 pixels wide */
+    .uploadNewVersionContainer{
+        margin-top: 4rem;
+    }
+}
+
+@media only screen and (min-width: 1367px) and (max-width: 1440px) {
+    /* Styles for screens between 1367 and 1440 pixels wide */
+    .uploadNewVersionContainer{
+        margin-top: 5rem;
+    }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1536px) {
+    /* Styles for screens between 1441 and 1536 pixels wide */
+    .uploadNewVersionContainer{
+        margin-top: 4rem;
+    }
+}
+
+@media only screen and (min-width: 1537px) and (max-width: 1600px) {
+    /* Styles for screens between 1537 and 1600 pixels wide */
+    .uploadNewVersionContainer{
+        margin-top: 5rem;
+    }
+}
+
+@media only screen and (min-width: 1601px) and (max-width: 1920px) {
+    .uploadNewVersionContainer{
+        margin-top: 5rem;
+    }
+}
+
+@media only screen and (min-width: 1921px) {
+    .uploadNewVersionContainer{
+        margin-top: 3rem;
+    }
+}
