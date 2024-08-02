@@ -57,7 +57,7 @@ const ChatBot = () => {
 
   const sendMessageToBackend = async (message: string) => {
     try {
-      const response = await fetch('http://52.21.129.119:8000/core/api/query-response/', {
+      const response = await fetch('http://52.21.129.119:8000/core/api/document-response/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
