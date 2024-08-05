@@ -5,14 +5,14 @@ import { type AppState } from '../../interfaces'
 import { twinService } from '../../services/twinService'
 import { triggerGoogleAnalyticPageView } from '../../utils/helpers/googleAnalytics'
 import './Chatbot.scss'
-import profileImage from './robot-profile.png'
-import robotIcon from './robot-icon.png'
+import profileImage from './robot.png'
+import robotIcon from './robot.png'
 
 const ChatBot = () => {
   const { clientId } = useParams<{ clientId: string }>()
   const [messages, setMessages] = useState<Array<{ sender: string, text: string }>>([])
   const [input, setInput] = useState('')
-  const [chatID, setChatID] = useState('')
+  const [chatID, setChatID] = useState('begin')
   const [selectedTwin, setSelectedTwin] = useState<string | null>(null)
   const [isMenuVisible, setIsMenuVisible] = useState(false)
   const [selectedTwinList, setSelectedTwinList] = useState<any[]>([])
@@ -21,8 +21,7 @@ const ChatBot = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
   // Key for localStorage
-  const storageKey = `chat_${clientId}_${chatID}`
-  console.log('new client ID', clientId)
+  const storageKey = `chat_${clientId ?? 'defaultClientId'}_${chatID ?? 'defaultChatID'}`
 
   useEffect(() => {
     triggerGoogleAnalyticPageView('/chatbot', 'ChatBot', userData)
@@ -41,10 +40,10 @@ const ChatBot = () => {
     const fetchTwinList = async () => {
       try {
         const selectedTwinParams = {
-          clientId: clientId ?? '5b691e07-d270-4816-88aa-f9a240b7f324',
+          clientId: clientId ?? '',
           queryParams: {
-            include: 'versions',
-          },
+            include: 'versions'
+          }
         }
 
         const response = await twinService.getAllTwinList(selectedTwinParams)
@@ -64,7 +63,7 @@ const ChatBot = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ query: message }),
+        body: JSON.stringify({ query: message })
       })
 
       if (!response.body) {
@@ -187,19 +186,28 @@ const ChatBot = () => {
                 </div>
               </div>
               <p>Your Response is Generating. Please Wait...</p>
-              </div>            
+              </div>
               </div>
           )}
-          {messages.slice().reverse().map((message, index) => (
-            <div key={index} className={`chatbot-message ${message.sender}`}>
-              {message.sender === 'bot' && <img src={robotIcon} alt="Robot Icon" />}
-              {message.sender === 'bot' ? (
-                <div dangerouslySetInnerHTML={{ __html: message.text }} />
-              ) : (
-                message.text
-              )}
-            </div>
-          ))}
+
+{messages.slice().reverse().map((message, index) => (
+  <div key={index} style={{ display: 'flex', justifyContent: message.sender === 'bot' ? 'flex-start' : 'flex-end',}}>
+    {message.sender === 'bot' && (
+      <span className="chatbot-img" style={{ marginRight: '1px' }}>
+        <img src={robotIcon} alt="Robot Icon" />
+      </span>
+    )}
+    <div className={`chatbot-message ${message.sender}`} style={{ display: 'flex', alignItems: 'center' }}>
+      {message.sender === 'bot' ? (
+        <div dangerouslySetInnerHTML={{ __html: message.text }} />
+      ) : (
+        message.text
+      )}
+    </div>
+  </div>
+))}
+
+
           <div ref={messagesEndRef} />
         </div>
         <div className="chatbot-input">

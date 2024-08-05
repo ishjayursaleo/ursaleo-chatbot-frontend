@@ -23,5 +23,5 @@ export enum APP_ROUTES {
   MANAGE_CLIENT_CONFIGURATIONS = '/manage-ul-admin/client-admin/:clientId/:clientName/manage-configurations',
   UPLOAD_NEW_TWIN_VERSION = '/manage-ul-admin/client-admin/:clientId/:clientName/manage-client-twins/:twinId/:twinName/details/upload-new-version',
   NEW_USER_LANDING = '/login',
-  CHATBOT = '/chatbot'
+  CHATBOT = '/chatbot/:clientId',
 }

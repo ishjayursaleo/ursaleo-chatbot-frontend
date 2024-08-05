@@ -1,0 +1,40 @@
+const sendMessageToBackend = async (message: string, onDataReceived: (data: string) => void) => {
+    try {
+      const response = await fetch('http://52.21.129.119:8000/core/api/document-response/', {  //should remove 's' form end
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ query: message }),
+      })
+
+      if (!response.body) {
+        throw new Error('ReadableStream not supported by this browser.')
+      }
+
+      
+      console.log('Response.body:', response.body)
+
+      const reader = response.body.getReader()
+      const decoder = new TextDecoder()
+      let result = ''
+
+      const processChunk = async () => {
+        const { done, value } = await reader.read()
+        console.log('read:', value)
+        if (done) {
+          onDataReceived(result + decoder.decode())
+          return
+        }
+        const chunk = decoder.decode(value, { stream: true })
+        result += chunk
+        onDataReceived(chunk)
+        setTimeout(processChunk, 100) // Introduce a delay of 100ms between processing each chunk
+      }
+
+      processChunk()
+    } catch (error) {
+      console.error('Error sending message to backend:', error)
+      onDataReceived('Sorry, there was an error processing your request.')
+    }
+  }
