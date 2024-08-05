@@ -8,11 +8,13 @@ import { entitlementAction } from '../../redux/actions'
 import SideBar from '../SideBar/SideBar'
 import KeyClockConfig from '../../configs/keycloak'
 import { getAccessToken } from '../../services/index'
+import { ChatBot } from '../../pages'
 
 const AppLayout: React.FC<{
   children?: React.ReactNode
   breadCrumb: BreadCrumb[]
-}> = ({ breadCrumb, children }) => {
+  showsidebar?: boolean
+}> = ({ breadCrumb, children, showsidebar = true }) => {
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -148,7 +150,8 @@ const AppLayout: React.FC<{
       <div className={'layout-row authorizedContainer'}>
         {/* sideBar component */}
         <AppLayoutHeader isSidebarOpen={!open} breadCrumb={breadCrumb} />
-        {memoizedSideBar}
+        {showsidebar && memoizedSideBar}
+        {!showsidebar && <ChatBot />}
         <aside className={'content'} style={{ backgroundColor: '#000' }}>
           {/* <aside className="content2">
             <AppLayoutHeader isSidebarOpen={!open} breadCrumb={breadCrumb} />

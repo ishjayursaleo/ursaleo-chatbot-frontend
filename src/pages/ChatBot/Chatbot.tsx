@@ -4,24 +4,24 @@ import { useParams } from 'react-router-dom';
 import { type AppState } from '../../interfaces';
 import { twinService } from '../../services/twinService';
 import { triggerGoogleAnalyticPageView } from '../../utils/helpers/googleAnalytics';
-import './Chatbot.scss';
+import './Chatbot.scss'; // Ensure this includes the new CSS
 import profileImage from './robot-profile.png';
-import robotIcon from './robot-icon.png'; 
+import robotIcon from './robot-icon.png';
 
 const ChatBot = () => {
-  const { clientId } = useParams();
+  const { clientId } = useParams<{ clientId: string }>();
   const [messages, setMessages] = useState<Array<{ sender: string, text: string }>>([]);
   const [input, setInput] = useState('');
   const [chatID, setChatID] = useState('');
   const [selectedTwin, setSelectedTwin] = useState<string | null>(null);
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [selectedTwinList, setSelectedTwinList] = useState<any[]>([]);
-  const [loading, setLoading] = useState(false); // New state for loading
+  const [loading, setLoading] = useState(false);
   const userData = useSelector((state: AppState) => state.user.storeUser);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // Key for localStorage
-  const storageKey = `chat_${clientId}_${chatID}`; 
+  const storageKey = `chat_${clientId}_${chatID}`;
+  console.log("new client ID", clientId);
 
   useEffect(() => {
     triggerGoogleAnalyticPageView('/chatbot', 'ChatBot', userData);
@@ -45,6 +45,7 @@ const ChatBot = () => {
             include: 'versions',
           },
         };
+
         const response = await twinService.getAllTwinList(selectedTwinParams);
         setSelectedTwinList(response?.data.data.filter(twin => twin?.versions.length > 0));
       } catch (error) {
@@ -55,20 +56,43 @@ const ChatBot = () => {
     fetchTwinList();
   }, [clientId]);
 
-  const sendMessageToBackend = async (message: string) => {
+  const sendMessageToBackend = async (message: string, onDataReceived: (data: string) => void) => {
     try {
-      const response = await fetch('http://52.21.129.119:8000/core/api/document-response/', {
+      const response = await fetch('http://52.21.129.119:8000/core/api/document-responses/', {  //should remove 's' form end
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ query: message }),
       });
-      const data = await response.json();
-      return data.openai_response.content; 
+
+      if (!response.body) {
+        throw new Error('ReadableStream not supported by this browser.');
+      }
+
+      console.log('Response:', response);
+      console.log('Response.body:', response.body);
+
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let result = '';
+
+      const processChunk = async () => {
+        const { done, value } = await reader.read();
+        if (done) {
+          onDataReceived(result + decoder.decode());
+          return;
+        }
+        const chunk = decoder.decode(value, { stream: true });
+        result += chunk;
+        onDataReceived(chunk);
+        setTimeout(processChunk, 100); // Introduce a delay of 100ms between processing each chunk
+      };
+
+      processChunk();
     } catch (error) {
       console.error('Error sending message to backend:', error);
-      return 'Sorry, there was an error processing your request.';
+      onDataReceived('Sorry, there was an error processing your request.');
     }
   };
 
@@ -82,7 +106,7 @@ const ChatBot = () => {
 
   const handleSendMessage = async () => {
     if (input.trim() !== '') {
-      setLoading(true); // Set loading to true when sending message
+      setLoading(true);
 
       const newInput = input;
       setInput('');
@@ -90,13 +114,22 @@ const ChatBot = () => {
       setMessages(newMessages);
       localStorage.setItem(storageKey, JSON.stringify(newMessages));
 
-      const botResponse = await sendMessageToBackend(newInput);
-      const formattedResponse = formatMessage(botResponse);
-      const updatedMessages = [...newMessages, { sender: 'bot', text: formattedResponse }];
-      setMessages(updatedMessages);
-      localStorage.setItem(storageKey, JSON.stringify(updatedMessages));
+      await sendMessageToBackend(newInput, (partialResponse) => {
+        const formattedResponse = formatMessage(partialResponse);
+        setMessages((prevMessages) => {
+          const lastMessage = prevMessages[prevMessages.length - 1];
+          if (lastMessage && lastMessage.sender === 'bot') {
+            const updatedMessages = [...prevMessages];
+            updatedMessages[updatedMessages.length - 1] = { sender: 'bot', text: lastMessage.text + formattedResponse };
+            return updatedMessages;
+          } else {
+            return [...prevMessages, { sender: 'bot', text: formattedResponse }];
+          }
+        });
+        localStorage.setItem(storageKey, JSON.stringify(messages));
+      });
 
-      setLoading(false); // Set loading to false when response is received
+      setLoading(false);
     }
   };
 
@@ -145,9 +178,17 @@ const ChatBot = () => {
       <div className="chatbot-content">
         <div className="chatbot-messages">
           {loading && (
+            <div>
             <div className="loading-indicator">
-              <div className="spinner"></div> {/* Spinner or loading indicator */}
-              <p>Loading...</p>
+              <div className="spinner">
+                <div className="bouncing-ellipses">
+                  <div className="ellipsis"></div>
+                  <div className="ellipsis"></div>
+                  <div className="ellipsis"></div>
+                </div>
+              </div>
+              <p>Please Wait...</p>
+              </div>
             </div>
           )}
           {messages.slice().reverse().map((message, index) => (

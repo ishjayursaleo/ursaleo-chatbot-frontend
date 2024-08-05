@@ -26,7 +26,6 @@ import ViewTwinDetails from '../pages/ViewTwinDetails/ViewTwinDetails'
 import ManageNewClientConfiguration from '../pages/ManageNewClientConfiguration/ManageNewClientConfiguration'
 import EditTwin from '../pages/EditTwin/EditTwin'
 
-
 const publicRoutes: any = [
   {
     path: APP_ROUTES.NEW_USER_LANDING,
@@ -107,9 +106,13 @@ const privateRoutes: any = [
     path: APP_ROUTES.WEB_SOCKET_DETAILS,
     element: <AppLayout breadCrumb={BREAD_CRUMB.ADD_NEW_ADMIN}><WebSocketDetails /></AppLayout>
   },
+  // {
+  //   path: APP_ROUTES.CHATBOT,
+  //   element: <AppLayout breadCrumb={BREAD_CRUMB.ADD_NEW_ADMIN}><ChatBot /></AppLayout>
+  // }
   {
     path: APP_ROUTES.CHATBOT,
-    element: <AppLayout breadCrumb={BREAD_CRUMB.ADD_NEW_ADMIN}><ChatBot /></AppLayout>
+    element: <AppLayout breadCrumb={BREAD_CRUMB.ADD_NEW_ADMIN} showsidebar={false}><ChatBot /></AppLayout>
   }
 ]
 
