@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import { type AppState } from '../../interfaces'
 import { twinService } from '../../services/twinService'
 import { triggerGoogleAnalyticPageView } from '../../utils/helpers/googleAnalytics'
-import './Chatbot.scss' // Ensure this includes the new CSS
+import './Chatbot.scss'
 import profileImage from './robot-profile.png'
 import robotIcon from './robot-icon.png'
 
@@ -16,10 +16,11 @@ const ChatBot = () => {
   const [selectedTwin, setSelectedTwin] = useState<string | null>(null)
   const [isMenuVisible, setIsMenuVisible] = useState(false)
   const [selectedTwinList, setSelectedTwinList] = useState<any[]>([])
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false) // New state for loading
   const userData = useSelector((state: AppState) => state.user.storeUser)
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
+  // Key for localStorage
   const storageKey = `chat_${clientId}_${chatID}`
   console.log('new client ID', clientId)
 
@@ -40,7 +41,7 @@ const ChatBot = () => {
     const fetchTwinList = async () => {
       try {
         const selectedTwinParams = {
-          clientId: clientId || '5b691e07-d270-4816-88aa-f9a240b7f324',
+          clientId: clientId ?? '5b691e07-d270-4816-88aa-f9a240b7f324',
           queryParams: {
             include: 'versions',
           },
@@ -58,7 +59,7 @@ const ChatBot = () => {
 
   const sendMessageToBackend = async (message: string, onDataReceived: (data: string) => void) => {
     try {
-      const response = await fetch('http://52.21.129.119:8000/core/api/document-response/', {  //should remove 's' form end
+      const response = await fetch('http://52.21.129.119:8000/core/api/document-response/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -77,19 +78,17 @@ const ChatBot = () => {
       const decoder = new TextDecoder()
       let result = ''
 
-      const processChunk = async () => {
+      while (true) {
         const { done, value } = await reader.read()
         if (done) {
-          onDataReceived(result + decoder.decode())
-          return
+          break
         }
         const chunk = decoder.decode(value, { stream: true })
         result += chunk
         onDataReceived(chunk)
-        setTimeout(processChunk, 100) // Introduce a delay of 100ms between processing each chunk
       }
 
-      processChunk()
+      onDataReceived(result + decoder.decode())
     } catch (error) {
       console.error('Error sending message to backend:', error)
       onDataReceived('Sorry, there was an error processing your request.')
@@ -106,7 +105,7 @@ const ChatBot = () => {
 
   const handleSendMessage = async () => {
     if (input.trim() !== '') {
-      setLoading(true)
+      setLoading(true) // Set loading to true when sending message
 
       const newInput = input
       setInput('')
@@ -129,7 +128,7 @@ const ChatBot = () => {
         localStorage.setItem(storageKey, JSON.stringify(messages))
       })
 
-      setLoading(false)
+      setLoading(false) // Set loading to false when response is received
     }
   }
 
@@ -188,8 +187,8 @@ const ChatBot = () => {
                 </div>
               </div>
               <p>Your Response is Generating. Please Wait...</p>
+              </div>            
               </div>
-            </div>
           )}
           {messages.slice().reverse().map((message, index) => (
             <div key={index} className={`chatbot-message ${message.sender}`}>
