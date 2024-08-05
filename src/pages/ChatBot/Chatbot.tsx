@@ -1,40 +1,40 @@
-import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
-import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
-import { type AppState } from '../../interfaces';
-import { twinService } from '../../services/twinService';
-import { triggerGoogleAnalyticPageView } from '../../utils/helpers/googleAnalytics';
-import './Chatbot.scss'; // Ensure this includes the new CSS
-import profileImage from './robot-profile.png';
-import robotIcon from './robot-icon.png';
+import React, { useState, useEffect, useLayoutEffect, useRef } from 'react'
+import { useSelector } from 'react-redux'
+import { useParams } from 'react-router-dom'
+import { type AppState } from '../../interfaces'
+import { twinService } from '../../services/twinService'
+import { triggerGoogleAnalyticPageView } from '../../utils/helpers/googleAnalytics'
+import './Chatbot.scss' // Ensure this includes the new CSS
+import profileImage from './robot-profile.png'
+import robotIcon from './robot-icon.png'
 
 const ChatBot = () => {
-  const { clientId } = useParams<{ clientId: string }>();
-  const [messages, setMessages] = useState<Array<{ sender: string, text: string }>>([]);
-  const [input, setInput] = useState('');
-  const [chatID, setChatID] = useState('');
-  const [selectedTwin, setSelectedTwin] = useState<string | null>(null);
-  const [isMenuVisible, setIsMenuVisible] = useState(false);
-  const [selectedTwinList, setSelectedTwinList] = useState<any[]>([]);
-  const [loading, setLoading] = useState(false);
-  const userData = useSelector((state: AppState) => state.user.storeUser);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const { clientId } = useParams<{ clientId: string }>()
+  const [messages, setMessages] = useState<Array<{ sender: string, text: string }>>([])
+  const [input, setInput] = useState('')
+  const [chatID, setChatID] = useState('')
+  const [selectedTwin, setSelectedTwin] = useState<string | null>(null)
+  const [isMenuVisible, setIsMenuVisible] = useState(false)
+  const [selectedTwinList, setSelectedTwinList] = useState<any[]>([])
+  const [loading, setLoading] = useState(false)
+  const userData = useSelector((state: AppState) => state.user.storeUser)
+  const messagesEndRef = useRef<HTMLDivElement>(null)
 
-  const storageKey = `chat_${clientId}_${chatID}`;
-  console.log("new client ID", clientId);
-
-  useEffect(() => {
-    triggerGoogleAnalyticPageView('/chatbot', 'ChatBot', userData);
-  }, [userData]);
+  const storageKey = `chat_${clientId}_${chatID}`
+  console.log('new client ID', clientId)
 
   useEffect(() => {
-    const savedMessages = localStorage.getItem(storageKey);
+    triggerGoogleAnalyticPageView('/chatbot', 'ChatBot', userData)
+  }, [userData])
+
+  useEffect(() => {
+    const savedMessages = localStorage.getItem(storageKey)
     if (savedMessages) {
-      setMessages(JSON.parse(savedMessages));
+      setMessages(JSON.parse(savedMessages))
     } else {
-      setMessages([]);
+      setMessages([])
     }
-  }, [chatID]);
+  }, [chatID])
 
   useEffect(() => {
     const fetchTwinList = async () => {
@@ -44,113 +44,113 @@ const ChatBot = () => {
           queryParams: {
             include: 'versions',
           },
-        };
+        }
 
-        const response = await twinService.getAllTwinList(selectedTwinParams);
-        setSelectedTwinList(response?.data.data.filter(twin => twin?.versions.length > 0));
+        const response = await twinService.getAllTwinList(selectedTwinParams)
+        setSelectedTwinList(response?.data.data.filter(twin => twin?.versions.length > 0))
       } catch (error) {
-        console.error('Error fetching twin list:', error);
+        console.error('Error fetching twin list:', error)
       }
-    };
+    }
 
-    fetchTwinList();
-  }, [clientId]);
+    fetchTwinList()
+  }, [clientId])
 
   const sendMessageToBackend = async (message: string, onDataReceived: (data: string) => void) => {
     try {
-      const response = await fetch('http://52.21.129.119:8000/core/api/document-responses/', {  //should remove 's' form end
+      const response = await fetch('http://52.21.129.119:8000/core/api/document-response/', {  //should remove 's' form end
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ query: message }),
-      });
+      })
 
       if (!response.body) {
-        throw new Error('ReadableStream not supported by this browser.');
+        throw new Error('ReadableStream not supported by this browser.')
       }
 
-      console.log('Response:', response);
-      console.log('Response.body:', response.body);
+      console.log('Response:', response)
+      console.log('Response.body:', response.body)
 
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder();
-      let result = '';
+      const reader = response.body.getReader()
+      const decoder = new TextDecoder()
+      let result = ''
 
       const processChunk = async () => {
-        const { done, value } = await reader.read();
+        const { done, value } = await reader.read()
         if (done) {
-          onDataReceived(result + decoder.decode());
-          return;
+          onDataReceived(result + decoder.decode())
+          return
         }
-        const chunk = decoder.decode(value, { stream: true });
-        result += chunk;
-        onDataReceived(chunk);
-        setTimeout(processChunk, 100); // Introduce a delay of 100ms between processing each chunk
-      };
+        const chunk = decoder.decode(value, { stream: true })
+        result += chunk
+        onDataReceived(chunk)
+        setTimeout(processChunk, 100) // Introduce a delay of 100ms between processing each chunk
+      }
 
-      processChunk();
+      processChunk()
     } catch (error) {
-      console.error('Error sending message to backend:', error);
-      onDataReceived('Sorry, there was an error processing your request.');
+      console.error('Error sending message to backend:', error)
+      onDataReceived('Sorry, there was an error processing your request.')
     }
-  };
+  }
 
   const formatMessage = (message: string) => {
     return message
-      .replace(/\n\n-/g, '<br><br>&bull;')
-      .replace(/\n-/g, '<br>&bull;')
+      .replace(/\n\n-/g, '<br><br>&bull')
+      .replace(/\n-/g, '<br>&bull')
       .replace(/\n\n/g, '<br><br>')
-      .replace(/\n/g, '<br>');
-  };
+      .replace(/\n/g, '<br>')
+  }
 
   const handleSendMessage = async () => {
     if (input.trim() !== '') {
-      setLoading(true);
+      setLoading(true)
 
-      const newInput = input;
-      setInput('');
-      const newMessages = [...messages, { sender: 'user', text: newInput }];
-      setMessages(newMessages);
-      localStorage.setItem(storageKey, JSON.stringify(newMessages));
+      const newInput = input
+      setInput('')
+      const newMessages = [...messages, { sender: 'user', text: newInput }]
+      setMessages(newMessages)
+      localStorage.setItem(storageKey, JSON.stringify(newMessages))
 
       await sendMessageToBackend(newInput, (partialResponse) => {
-        const formattedResponse = formatMessage(partialResponse);
+        const formattedResponse = formatMessage(partialResponse)
         setMessages((prevMessages) => {
-          const lastMessage = prevMessages[prevMessages.length - 1];
+          const lastMessage = prevMessages[prevMessages.length - 1]
           if (lastMessage && lastMessage.sender === 'bot') {
-            const updatedMessages = [...prevMessages];
-            updatedMessages[updatedMessages.length - 1] = { sender: 'bot', text: lastMessage.text + formattedResponse };
-            return updatedMessages;
+            const updatedMessages = [...prevMessages]
+            updatedMessages[updatedMessages.length - 1] = { sender: 'bot', text: lastMessage.text + formattedResponse }
+            return updatedMessages
           } else {
-            return [...prevMessages, { sender: 'bot', text: formattedResponse }];
+            return [...prevMessages, { sender: 'bot', text: formattedResponse }]
           }
-        });
-        localStorage.setItem(storageKey, JSON.stringify(messages));
-      });
+        })
+        localStorage.setItem(storageKey, JSON.stringify(messages))
+      })
 
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  }
 
   const handleTwinSelect = (twin: { clientId: string, twinId: string, name: string }) => {
-    setSelectedTwin(twin.name);
-    setChatID(twin.twinId);
-    setIsMenuVisible(false);
-  };
+    setSelectedTwin(twin.name)
+    setChatID(twin.twinId)
+    setIsMenuVisible(false)
+  }
 
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
-      handleSendMessage();
+      handleSendMessage()
     }
-  };
+  }
 
   useLayoutEffect(() => {
-    const messagesContainer = document.querySelector('.chatbot-messages');
+    const messagesContainer = document.querySelector('.chatbot-messages')
     if (messagesContainer) {
-      messagesContainer.scrollTop = 0;
+      messagesContainer.scrollTop = 0
     }
-  }, [messages]);
+  }, [messages])
 
   return (
     <div className="chatbot">
@@ -166,7 +166,7 @@ const ChatBot = () => {
                 key={index}
                 className={twin.name === selectedTwin ? 'active' : ''}
                 onClick={() => {
-                  handleTwinSelect({ clientId: twin.clientId, twinId: twin.id, name: twin.name });
+                  handleTwinSelect({ clientId: twin.clientId, twinId: twin.id, name: twin.name })
                 }}
               >
                 {twin.name}
@@ -187,7 +187,7 @@ const ChatBot = () => {
                   <div className="ellipsis"></div>
                 </div>
               </div>
-              <p>Please Wait...</p>
+              <p>Your Response is Generating. Please Wait...</p>
               </div>
             </div>
           )}
@@ -219,7 +219,7 @@ const ChatBot = () => {
         <img src={profileImage} alt="Profile" />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ChatBot;
+export default ChatBot
