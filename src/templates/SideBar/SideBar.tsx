@@ -12,7 +12,7 @@
 import React, { useEffect, useRef, useState, useMemo } from 'react'
 import Autocomplete from '@mui/material/Autocomplete'
 import CircularProgress from '@mui/material/CircularProgress'
-import { Box, TextField, Typography, useMediaQuery, withStyles } from '@mui/material'
+import { Box, TextField, Typography, useMediaQuery, withStyles, IconButton } from '@mui/material'
 import { styled, width } from '@mui/system'
 import { NavLink, useNavigate, useParams } from 'react-router-dom'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
@@ -23,6 +23,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { alertActions } from '../../redux/actions'
 import { CheckOutlined, CloseOutlined } from '@ant-design/icons'
 import { Switch, Space } from 'antd'
+
+import chatbotIcon from '../../assets/img/robot.png' // Add your chatbot image path here
 
 // assets | components
 import ursaleoLogo from '../../assets/img/ursaleoLogo.png'
@@ -303,17 +305,31 @@ function SideBar(props: any) {
   const handleEnvChange = (event: any) => {
     setIsEnvLocal(event)
   }
+
+  const handleChatbotClick = () => {
+    if (selectedValue) {
+      navigate(`/chatbot/${selectedValue}`)
+    }
+  }
+
   return (
     <React.Fragment>
       <aside ref={sidebarRef} className={'layout-row sideNavigation'}>
         <aside className={'navBar'}>
           <aside className={'bodyWrapper'}>
-            <aside className={'logo-section'}>
-              {!open &&
-                <div className="contentGroup">
-                  <img className='img-logo' width='auto' height='35px' src={ursaleoLogo} alt="ursaleo-logo" />
-                </div>}
-            </aside>
+          <aside className={'logo-section'} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
+            {!open && (
+              <div className="contentGroup">
+                <img className='img-logo' width='auto' height='35px' src={ursaleoLogo} alt="ursaleo-logo" />
+              </div>
+            )}
+            <div style={{ position: 'absolute', right: '5px', top: '50%', transform: 'translateY(-50%)', marginRight: '10px', textAlign: 'center' }}>
+              <IconButton onClick={handleChatbotClick}>
+                <img src={chatbotIcon} alt="Chatbot" width="70" height="60" />
+              </IconButton>
+              <h6 style={{ color: '#D7E9FF', fontSize: '1rem', margin: '0 10px 0 0' }}>CHAT AI</h6>
+            </div>
+          </aside>
             <div className={'content-wrapper'}>
               <div className={'navBarContent layout-row name-field'}>
                 <Typography textAlign='center' color='#F7F7F7' fontSize={'28px'}>
